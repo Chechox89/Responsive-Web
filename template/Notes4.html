@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="cache-control" content="no-cache"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="-1"><style type="text/css"></style>
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+ 
+
+  <script>
+  $( function() {
+    var tabs = $( "#tabs" ).tabs();
+    tabs.find( ".ui-tabs-nav" ).sortable({
+      axis: "x",
+      stop: function() {
+        tabs.tabs( "refresh" );
+      }
+    });
+  } );
+  </script>
+
+ 
+</head><body><div id="tabs" class="ui-tabs ui-corner-all ui-widget ui-widget-content">
+  <ul role="tablist" class="ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header ui-sortable">
+    <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab ui-sortable-handle" aria-controls="tabs-1" aria-labelledby="ui-id-1" aria-selected="false" aria-expanded="false"><a href="#tabs-1" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-1">Nunc tincidunt</a></li>
+    <li role="tab" tabindex="0" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab ui-sortable-handle ui-tabs-active ui-state-active" aria-controls="tabs-2" aria-labelledby="ui-id-2" aria-selected="true" aria-expanded="true"><a href="#tabs-2" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-2">Proin dolor</a></li>
+  
+  </ul>
+  <div id="tabs-1" aria-labelledby="ui-id-1" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content" aria-hidden="true" style="display: none;">
+   <div class="resp-container">
+    <iframe class="resp-iframe" src="https://www.youtube.com/embed/dQw4w9WgXcQ" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+</div>
+  </div>
+  <div id="tabs-2" aria-labelledby="ui-id-2" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content" aria-hidden="false" style="display: block;">
+    <div class="resp-container">
+    <iframe class="resp-iframe" src="https://www.youtube.com/embed/dQw4w9WgXcQ" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+</div>
+  </div>
+ 
+</div>
+ 
+ 
+<script>// Write JavaScript here </script></body>
