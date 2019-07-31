@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="cache-control" content="no-cache"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="-1"><style type="text/css">body{
+    color:#c0c0c0;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+    font-size:100%;
+    letter-spacing: 1.2px;
+    background: #222
+}
+.wrap {
+    width:480px;
+    margin:50px auto;
+}
+.cal {
+    width:480px;
+    height:auto;
+    padding:10px 0;
+    margin: auto;
+    background:#232323;
+    border:#000 1px solid;
+    border-radius:7px;
+    -webkit-border-radius:7px;
+    -moz-border-radius:7px;
+    box-shadow:rgba(0,0,0,0.4) 0px 2px 5px, inset rgba(255,255,255,0.9) 0px 1px 1px -1px;
+    -webkit-box-shadow:rgba(0,0,0,0.4) 0px 2px 5px, inset rgba(255,255,255,0.9) 0px 1px 1px -1px;
+    -moz-box-shadow:rgba(0,0,0,0.4) 0px 2px 5px, inset rgba(255,255,255,0.9) 0px 1px 1px -1px;
+    background-image:-moz-linear-gradient(top, #333333, #1f1f1f);
+        background-image:-webkit-linear-gradient(top, #333333, #1f1f1f);
+            background-image:linear-gradient(top, #333333, #1f1f1f);
+    overflow: hidden;
+    text-align: center;
+}
+.screen{
+    width:424px;
+    height:93px;
+    margin: 12px auto 30px;
+    padding:15px 20px;
+    color:#c0c0c0;
+    text-align: right;
+    font-size: 3em;
+    letter-spacing: 3px;
+    overflow:hidden;
+    border:#000 1px solid;
+    border-radius:7px;
+    -webkit-border-radius:7px;
+    -moz-border-radius:7px;
+    box-shadow:inset rgba(0,0,0,1) 0px 1px 4px, inset rgba(225,225,225,0.3) 0px -2px 4px -2px;
+    -webkit-box-shadow:inset rgba(0,0,0,1) 0px 1px 4px, inset rgba(225,225,225,0.3) 0px -2px 4px -2px;
+    -moz-box-shadow:inset rgba(0,0,0,1) 0px 1px 4px, inset rgba(225,225,225,0.3) 0px -2px 4px -2px;
+    background-image: -moz-linear-gradient(top, #3e3e3e 0%, #303030 100%);
+        background-image: -webkit-linear-gradient(top, #3e3e3e 0%, #303030 100%);
+            background-image: linear-gradient(top, #3e3e3e 0%, #303030 100%);
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.title{
+    font-size: 1.2em;
+}
+.buttons{
+    padding:0;
+    width:423px;
+    margin:auto;
+    overflow: hidden;
+    list-style: none;
+}
+.buttons li{
+    display:inline;
+    float:left;
+    padding:0px;
+    margin-right:13px;
+    margin-bottom:10px;
+}
+/* remove margin-right on every fourth button */
+.buttons li:nth-child(4n){
+    margin-right:0;
+}
+.buttons a{
+    display:block;
+    width:95px;
+    height:68px;
+    padding:18px 0 12px;
+    color:#c0c0c0;
+    font-family: "Myriad Pro", Arial, sans-serif;
+    font-size:1.6em;
+    font-weight: 500;
+    letter-spacing: -2px;
+    background-color:#2f2f2f;
+    border: #000 1px solid;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow:#000 0px -1px 0px;
+    box-shadow: inset rgba(255,255,255,0.1) 0px 1px 0px, inset rgba(0,0,0,0.2) 0px -2px 2px;
+    -webkit-box-shadow: inset rgba(255,255,255,0.1) 0px 1px 0px, inset rgba(0,0,0,0.2) 0px -2px 2px;
+    -moz-box-shadow: inset rgba(255,255,255,0.1) 0px 1px 0px, inset rgba(0,0,0,0.2) 0px -2px 2px;
+    background-image:-moz-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
+        background-image:-webkit-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
+            background-image:linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    cursor: pointer;
+}
+.buttons a:hover {opacity:0.8}
+.buttons a:active{
+    box-shadow: inset rgba(0,0,0,0.5) 0px 2px 8px;
+    background-image:-moz-linear-gradient(top, #2f2f2f 0%, #363636 100%);
+        background-image:-webkit-linear-gradient(top, #2f2f2f 0%, #363636 100%);
+            background-image:linear-gradient(top, #2f2f2f 0%, #363636 100%);
+}
+/* tall = button */
+.tall{height:151px !important;}
+/* Wide 0 */
+.wide{width:205px !important;}
+/* shift last row up, because the tall button pushes it down */
+.shift{margin-top:-78px;}
+
+
+
+.h1{
+    text-align: center;
+    color:#fff;
+    font-weight: 400;
+    font-size: 4em;
+    line-height: 0;
+    margin-top:80px;
+    margin-bottom:-60px;
+    text-shadow:#000 0px -1px 0px;
+}
+p{
+    color:#fff;
+    text-shadow: #999 0px -1px 0px;
+    font-size:1.2em;
+    line-height: 2em;
+}
+a{
+    color:#953b3b;
+}
+
+
+
+
+.history{display:none}
+.clear_his {
+    display: block;
+    margin: 10px;
+    font-size: 12px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.history ul {
+    margin: 10px;
+    
+    background: #202020;
+    background-color: rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+       -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+         -o-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+            box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+}
+.history li {
+    padding: 8.5px;
+    color: #aaa;
+    border-top:1px solid #222;
+    border-bottom:1px solid #000;
+}
+.history li:first-child {border-top: 0 none}
+.history li:last-child {border-bottom: 0 none}
+
+.history span {border-bottom: 1px dotted #444}</style><script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+
+</head><body><div class="wrap">
+    <div class="cal">
+        <span class="title">Calculator</span>
+        <div class="screen"></div>
+        <input type="hidden" class="outcome" value="">
+        <ul class="buttons">
+            <li><a class="clear" href="c">C</a></li>
+            <li><a class="val" href="-">±</a></li>
+            <li><a class="val" href="/">÷</a></li>
+            <li><a class="val" href="*">×</a></li>
+            <li><a class="val" href="7">7</a></li>
+            <li><a class="val" href="8">8</a></li>
+            <li><a class="val" href="9">9</a></li>
+            <li><a class="val" href="-">-</a></li>
+            <li><a class="val" href="4">4</a></li>
+            <li><a class="val" href="5">5</a></li>
+            <li><a class="val" href="6">6</a></li>
+            <li><a class="val" href="+">+</a></li>
+            <li><a class="val" href="1">1</a></li>
+            <li><a class="val" href="2">2</a></li>
+            <li><a class="val" href="3">3</a></li>
+            <li><a class="equal tall" href="=">=</a></li>
+            <li><a class="val wide shift" href="0">0</a></li>
+            <li><a class="val shift" href=".">.</a></li>
+        </ul>
+    </div>
+    
+    <div class="history">
+        <span class="clear_his">Clear</span>
+        <ul class="list"></ul>
+    </div>
+</div><script>$(function() {
+    var $screen = $(".screen"),
+        screen = $screen[0];
+
+    var $outcome = $(".outcome"),
+        outcome = $outcome[0];
+
+    var result = false;
+
+    // when a value is clicked
+    $(".val").click(function(e) {
+        if (result) {
+            $(".clear").click();
+            result = false;
+        }
+
+        //grab this link's href value
+        var a = this.getAttribute("href");
+
+        // append said value to the screen
+        screen.innerHTML += a;
+
+        // append same value to a hidden input
+        outcome.value += a;
+
+        return false;
+    });
+
+    // when equals is clicked
+    $(".equal").click(function() {
+        result = true;
+
+        // solve equation and put in hidden field
+        outcome.value = eval(outcome.value);
+
+        // create and show the history list
+        $(".history").show().find("ul")[0].innerHTML +=
+            "<li><span>" +
+            screen.innerHTML +
+            "</span><br>" +
+            outcome.value +
+            "</li>";
+
+        // take hidden field's value & put it on screen
+        screen.innerHTML = eval(outcome.value);
+
+        return false;
+    });
+
+    // clear field
+    $(".clear").click(function(e) {
+        outcome.value = "";
+        screen.innerHTML = "";
+        return false;
+    });
+
+    $(".clear_his").click(function() {
+        $(".history").slideUp(function() {
+            $(this).find("ul").html("");
+        });
+    });
+    
+    var filter = function(char) {
+        return $("a").filter("[href='" + char + "']").click();
+    };
+
+    $(document).keydown(function(e){
+        // alert(e.which);
+        filter({
+            13: "=",
+            106: "*",
+            107: "+",
+            109: "-",
+            111: "/",
+            46: "c",
+            96: "0",
+            97: "1",
+            98: "2",
+            99: "3",
+            100: "4",
+            101: "5",
+            102: "6",
+            103: "7",
+            104: "8",
+            105: "9"
+        }[e.which]);
+
+        if(e.which === 8) {
+            outcome.value = outcome.value.slice(0, -1);
+            screen.innerHTML = screen.innerHTML.slice(0, -1);
+            return false;
+        }
+    });
+});</script></body>
