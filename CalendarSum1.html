@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="cache-control" content="no-cache"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="-1"><style type="text/css">input{
+  
+  padding: 5px;
+  
+}
+
+td, tr{
+  
+  
+  font-size: 15px;
+}
+
+p{
+  
+  font-size: 50px;
+}</style><link type="text/css" rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+
+
+</head><body>Date Format MM/DD/YYYY
+
+
+ <br><br><br>
+<fieldset>
+  <label for="from">From</label>
+<input type="text" id="from" name="from" class="hasDatepicker"><br><br>
+<label for="to">to</label>
+<input type="text" id="to" name="to" class="hasDatepicker"><br><br>
+
+ <input type="button" id="calc" value="Count">
+<br><br>
+  <h5>Total Days:</h5>
+ <p id="result">24</p>
+
+</fieldset>
+
+<script>
+ $( "#from" ).datepicker();
+ $( "#to" ).datepicker();
+
+
+$("#UNUSEDcalc").click(function () {
+    //Get dates from input text  
+    var from = $('#from').val();
+    var to = $('#to').val();
+
+    //Create an Object for the dates inserted in the form
+    var fromDate = new Date(from);
+    var toDate = new Date(to);
+
+    //Create all the Ranges  
+    var rangeAstart = new Date('01/01/2012');
+    var rangeAend = new Date('06/30/2012');
+    var rangeBstart = new Date('07/01/2012');
+    var rangeBend = new Date('12/31/2012');
+    var rangeCstart = new Date('01/01/2013');
+    var rangeCend = new Date('06/30/2013');
+    var rangeDstart = new Date('07/01/2013');
+    var rangeDend = new Date('12/31/2013');
+
+    //Check how many days fall in each Range
+    var days = new Array();
+    //Range A
+    if (fromDate >= rangeAend) {
+        days.push('0');
+    } else if (toDate < rangeAstart) {
+        days.push('0');
+    } else {
+        days.push(Math.round((Math.min(toDate, rangeAend) - Math.max(fromDate, rangeAstart.setDate(rangeAstart.getDate() - 1))) / (1000 * 60 * 60 * 24)))
+    }
+    //Range B
+    if (fromDate >= rangeBend) {
+        days.push('0');
+    } else if (toDate < rangeBstart) {
+        days.push('0');
+    } else {
+        days.push(Math.round((Math.min(toDate, rangeBend) - Math.max(fromDate, rangeBstart.setDate(rangeBstart.getDate() - 1))) / (1000 * 60 * 60 * 24)))
+    }
+    //Range C
+    if (fromDate >= rangeCend) {
+        days.push('0');
+    } else if (toDate < rangeCstart) {
+        days.push('0');
+    } else {
+        days.push(Math.round((Math.min(toDate, rangeCend) - Math.max(fromDate, rangeCstart.setDate(rangeCstart.getDate() - 1))) / (1000 * 60 * 60 * 24)))
+    }
+    //Range D
+    if (fromDate >= rangeDend) {
+        days.push('0');
+    } else if (toDate < rangeDstart) {
+        days.push('0');
+    } else {
+        days.push(Math.round((Math.min(toDate, rangeDend) - Math.max(fromDate, rangeDstart.setDate(rangeDstart.getDate() - 1))) / (1000 * 60 * 60 * 24)))
+    }
+
+    //Total number of days  
+    var totalDays = ((toDate - fromDate) / (1000 * 60 * 60 * 24));
+    //Insert the result to the Table
+    $('#record > tbody:last').append( totalDays + '</td></tr>');
+
+});
+
+
+
+
+
+$("#calc").click(function () 
+    {
+        addDaysRow($('#from').val(), $('#to').val());
+    });
+
+    function addDaysRow(fromDate, toDate) {
+        var rangeAstart = new Date('01/01/2012');
+        var rangeAend = new Date('06/30/2012');
+        var rangeBstart = new Date('07/01/2012');
+        var rangeBend = new Date('12/31/2012');
+        var rangeCstart = new Date('01/01/2013');
+        var rangeCend = new Date('06/30/2013');
+        var rangeDstart = new Date('07/01/2013');
+        var rangeDend = new Date('12/31/2013');
+
+        var diff = datediff(fromDate, toDate, "days");
+        
+        $('#result').html( diff );
+     
+    }
+
+    function datediff(fromDate, toDate, interval) {
+        var second = 1000,
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24,
+            week = day * 7;
+        fromDate = new Date(fromDate);
+        toDate = new Date(toDate);
+        var timediff = toDate - fromDate;
+        if (isNaN(timediff)) return NaN;
+        switch (interval) {
+            case "years":
+                return toDate.getFullYear() - fromDate.getFullYear();
+            case "months":
+                return (
+                (toDate.getFullYear() * 12 + toDate.getMonth()) - (fromDate.getFullYear() * 12 + fromDate.getMonth()));
+            case "weeks":
+                return Math.floor(timediff / week);
+            case "days":
+                return Math.floor(timediff / day);
+            case "hours":
+                return Math.floor(timediff / hour);
+            case "minutes":
+                return Math.floor(timediff / minute);
+            case "seconds":
+                return Math.floor(timediff / second);
+            default:
+                return undefined;
+        }
+    }
+
+
+</script><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="position: absolute; top: 0px; left: 40.3993px; z-index: 1; display: none;"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">July</span>&nbsp;<span class="ui-datepicker-year">2019</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th class="ui-datepicker-week-end"><span title="Sunday">Su</span></th><th><span title="Monday">Mo</span></th><th><span title="Tuesday">Tu</span></th><th><span title="Wednesday">We</span></th><th><span title="Thursday">Th</span></th><th><span title="Friday">Fr</span></th><th class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">1</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">2</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">3</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">4</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">5</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">6</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">7</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">8</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">9</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">10</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">11</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">12</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">13</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">14</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">15</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">16</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">17</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">18</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">19</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">20</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">21</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">22</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">23</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">24</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">25</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">26</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">27</a></td></tr><tr><td class=" ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default ui-state-highlight" href="#">28</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">29</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">30</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2019"><a class="ui-state-default" href="#">31</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div></body>
