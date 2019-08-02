@@ -1,0 +1,4043 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="cache-control" content="no-cache"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="-1"><style type="text/css"></style>
+
+<meta http-equiv="cache-control" content="no-cache"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="-1"><style type="text/css">body {
+    background-image: url("https://static.techspot.com/images2/news/bigimage/2018/03/2018-03-14-image-31.jpg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-color: #000;
+}
+
+.radio {
+
+
+    float: left;
+    width: 200px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* ******************************************************************************************************************************  
+
+Calculator
+
+
+********************************************************************************************************************/
+
+button {
+
+    float: left;
+    padding: 2%;
+
+
+
+}
+
+#content {
+    color: #000;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    overflow-x: auto;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 1px 1px #345A8E;
+    border: 1px solid #ccc;
+    padding: 10%;
+    border-radius: 20px;
+    border-color: #000;
+    font-size: 100%;
+}
+
+
+
+
+p {
+
+    text-align: left;
+    width: 100%;
+    padding: 15px 1px;
+}
+
+.note {
+
+    background-color: green;
+    color: black;
+    padding: 15px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.note:hover {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    background-color: red;
+    transition: 0.3s;
+}
+
+.tops {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    padding: 15px;
+
+
+}
+
+.fields {
+    margin-left: 5%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+
+.ContentNotes {
+
+
+    position: relative;
+    padding: 10px;
+    background-color: white;
+
+    border-radius: 50px 15px;
+}
+
+#searching {
+    margin-top: auto;
+    position: relative;
+    padding: 10px;
+    background-image: url("https://img.freepik.com/free-vector/white-canvas-background_1053-239.jpg?size=338&ext=jpg");
+
+    border-radius: 50px 15px;
+}
+
+.tops:hover {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    background-color: red;
+    transition: 0.3s;
+}
+
+#myList {
+    background-color: white;
+    padding: 10px;
+}
+
+input {
+    padding: 10px;
+    font-size: 100%;
+    border-radius: 10px;
+}
+
+button {
+    margin: 5px;
+    background-color: #990000;
+    color: #fff;
+    font-size: 20px;
+    border: 0px;
+    border-radius: 5px;
+
+}
+
+button:hover {
+    margin: 5px;
+    background-color: #ff3333;
+    color: black;
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: none;
+    background-color: #86b300;
+}
+
+h1 {
+    color: #630414;
+}
+
+h3 {
+    color: chocolate
+}
+
+#p2 {
+    color: #0A1302;
+    background-color: darkgray;
+    padding: 10px;
+}
+
+#p3 {
+    color: #0A1302;
+    background-color: darkcyan;
+    padding: 10px;
+}
+
+#p4 {
+    color: aqua;
+    background-color: darkslateblue;
+    padding: 10px;
+}
+
+#content {
+    color: #fff;
+    width: 100%;
+
+    height: auto;
+    position: relative;
+    overflow-x: auto;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 1px 1px #345A8E;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 20px;
+    border-color: #000;
+    font-size: 100%;
+}
+
+#nota {
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+fieldset {
+    border: 0;
+    margin-left: 300px;
+}
+
+label {
+    display: block;
+    margin: 5px 0 0 0;
+}
+
+#circle {
+    float: left;
+    background: yellow;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+
+
+.myDiv {
+    display: none;
+    text-align: center;
+    background-color: white;
+}
+
+.myDiv img {
+    margin: 0 auto;
+}
+
+.myDiv span {
+    text-align: center;
+    background: #ffdede;
+    padding: 6px 10px;
+    display: block;
+    width: 100px;
+    border: 1px solid #d47c7c;
+    margin: 8px auto;
+}
+
+#myselection {
+
+    cursor: pointer;
+    font-size: 25px;
+    transition: 0.9s;
+    width: 70%;
+}
+
+
+.myDiv2 {
+    display: none;
+    background-color: white;
+    text-align: right;
+    padding: 0px;
+}
+
+.myDiv {
+
+    width: 80%;
+}
+
+
+table {
+    overflow: hidden;
+    border: 1px solid #780470;
+    border-collapse: collapse;
+    background-color: white;
+    text-align: left;
+}
+
+tr {
+
+    color: black;
+}
+
+tr:hover {
+    background-color: #ffa;
+}
+
+
+
+td,
+th {
+    position: relative;
+    border: 1px solid #780470;
+    padding: 5px;
+
+}
+
+td:hover::after,
+th:hover::after {
+    content: "";
+    position: absolute;
+    background-color: #ffa;
+    left: 0;
+    top: -5000px;
+    height: 10000px;
+    width: 100%;
+    z-index: -1;
+}
+
+
+
+
+.res1 {
+
+    display: none;
+}
+
+
+.res2 {
+
+    display: none;
+}
+
+
+#rendered-formA1{
+
+    display: none;
+}
+
+#rendered-formB1 {
+
+    display: none;
+}
+
+
+#rendered-formA2 {
+
+    display: none;
+}
+
+
+#rendered-formB2 {
+
+    display: none;
+}
+
+
+#rendered-formA3 {
+
+    display: none;
+}
+
+
+#rendered-formB3 {
+
+    display: none;
+}
+
+#rendered-formA4 {
+
+    display: none;
+}
+
+
+
+#rendered-formB4 {
+
+    display: none;
+}
+
+#rendered-formA5 {
+
+    display: none;
+}
+
+#rendered-formB5 {
+
+    display: none;
+}
+
+#rendered-formA6 {
+
+    display: none;
+}
+
+#rendered-formB6 {
+
+    display: none;
+}
+
+
+
+#getdata {
+
+    padding: 2%;
+    background: #730130;
+
+    font-size: 100%;
+    color: white;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+    button {
+
+        float: left;
+        padding: 2%;
+
+
+
+    }
+
+
+
+    table {
+
+
+        width: 100%;
+        font-size: 50%;
+
+    }
+
+    body {
+        background-image: url("https://static.techspot.com/images2/news/bigimage/2018/03/2018-03-14-image-31.jpg");
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-color: #000;
+        color: black;
+    }
+
+    .alert1 {
+
+        color: green;
+        display: none;
+    }
+
+
+
+
+    #selectVerb {
+
+        width: 50%;
+    }
+
+    #content {
+        color: #000;
+        width: 100%;
+
+        height: 100%;
+        position: absolute;
+
+        background-color: #ffffff;
+        box-shadow: 1px 1px 1px 1px #345A8E;
+        border: 1px solid #ccc;
+        padding: 10%;
+        border-radius: 20px;
+        border-color: #000;
+        font-size: 100%;
+        margin-left: -30px;
+        margin-top: 40px;
+    }
+
+
+
+    #getdata2 {
+
+        padding: 2%;
+        background: #730130;
+
+        font-size: 100%;
+        color: white;
+    }
+
+
+
+
+
+
+    select {
+
+        margin: 2%;
+    }
+
+
+
+
+    textarea {
+        margin: 2%;
+
+
+    }
+
+    label {
+
+        margin: 2%;
+    }
+
+
+    input {
+
+        width: 50%;
+    }
+
+}</style><link type="text/css" rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+
+
+
+
+
+
+</head><body><div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+    <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all ui-sortable" role="tablist">
+        <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-1" aria-labelledby="ui-id-3" aria-selected="false"><a href="#tabs-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-3">NOTES</a></li>
+        <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs-2" aria-labelledby="ui-id-4" aria-selected="true"><a href="#tabs-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-4">TOOLS</a></li>
+        <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-3" aria-labelledby="ui-id-5" aria-selected="false"><a href="#tabs-3" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-5">TRACKER</a></li>
+    </ul>
+    <div id="tabs-1" aria-labelledby="ui-id-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+
+        <br>
+        <br>
+      <br><h1>Mortgage Scenario Types:</h1>
+        <br>
+        <select id="selectVerb">
+
+            <option>Select An option</option>
+            <option value="one">Present Landlord</option>
+            <option value="two">Previous Landlord</option>
+            <option value="Three">Utility</option>
+            <option value="Four">Insurance</option>
+            <option value="Five">Credit Card</option>
+            <option value="Six">Credit Card / 0 Bal</option>
+            <option value="Seven">Credit Card / Too new to rate</option>
+            <option value="Eight">Auto Loan</option>
+            <option value="Nine">Auto Lease</option>
+            <option value="Ten">Mortgage</option>
+            <option value="Eleven">Home Equity Loan</option>
+            <option value="Twelve">HELOC </option>
+            <option value="Thirdteen">Paid and Close</option>
+            <option value="Fourteen">Transfer (Current accounts)</option>
+            <option value="Fifteen">Unpaid Collection</option>
+            <option value="Sixteen">Unpaid Charge Off</option>
+            <option value="Seventeen">Paid Collection</option>
+            <option value="Eighteen">Paid Charge Off</option>
+            <option value="Nineteen">Student Loans (DEF / FORB / GRACE PER)</option>
+            <option value="Twenty">Student Loans (REPAYMENT)</option>
+            <option value="Twentyone">Student Loans (IBR)</option>
+            <option value="Twentytwo">Student Loans (COMBINE PAYMENT)</option>
+            <option value="Twentythree">Student Loans(CONSOLIDATED)</option>
+            <option value="Twentyfour">Ownership</option>
+            <option value="Twentyfive">BK7 - Unssecured Accounts</option>
+            <option value="Twentysix">BK7 - secured Accounts</option>
+            <option value="Twentyseven">BK13 - Unssecured Accounts</option>
+            <option value="Twentyeight">BK13 - secured Accounts (Creditor W/ Property)</option>
+            <option value="Twentynine">BK13 - secured Accounts (App W/ Property)</option>
+
+        </select>
+        <br><br><br><br>
+
+        
+
+
+            
+
+
+
+
+
+            <!-- *///////     /////     TABS5        /////////////-->
+            <script type="text/javascript">
+                $(function() {
+                    $("#tabs1").tabs({
+                        event: "mouseover"
+                    });
+                });
+            </script>
+
+
+
+          
+
+        <div id="showone" class="myDiv2" style="display: none;">
+
+            
+            <!-- *////////////////  PRESENT LANDLORD     //////////////////-->
+            <h1>Present Landlord</h1> <br><br>
+
+
+
+
+            <!-- *///////     /////     TABS3        /////////////-->
+            <script type="text/javascript">
+                $(function() {
+                    $("#tabs1").tabs({
+                        event: "mouseover"
+                    });
+                });
+            </script>
+
+
+
+            <div id="tabs1" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+
+                <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all ui-sortable" role="tablist">
+                    <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs1-1" aria-labelledby="ui-id-1" aria-selected="true"><a href="#tabs1-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">New Trade</a></li>
+                    <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs1-2" aria-labelledby="ui-id-2" aria-selected="false"><a href="#tabs1-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Regular Update</a></li>
+
+                </ul>
+
+                <!-- *///////////////  TAB3-1     //////////////////-->
+                <div id="tabs1-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false">
+
+                    <br> <br> <br> <button id="getdataA1">New trade</button><br> <br> <br>
+
+
+
+
+
+                    <!-- *////////////////  DIALOG    //////////////////-->
+
+                    <div id="dialog-messageA1" title="New Trade Added">
+                      
+                      <!-- *////////////////  SHOWONE   
+
+
+                        var echl = $("#NewPreEchlA1").val();
+
+                      var phone = $("#NewPrePhoneA1").val();
+                      var select = $("#selectA1 option:selected").val();
+                      var rep = $("#NewPreRepA1").val();
+                      var name = $("#new-pre-nameA1").val();
+                      var movein = $("#NewPreMoveA1").val();
+                      var payment = $("#NewPrePayAmA1").val();
+                      var lpm = $("#NewPreLpmA1").val();
+                      var npd = $("#NewPreNpdA1").val();
+                      var lates = $("#NewPreLatesNotesA1").val();
+
+              //////////////////-->
+
+
+                      
+<!-- *////////////////  TEXTFIELD    //////////////////-->
+
+  <form id="rendered-formA1">
+      <div class="rendered-formA1">
+        <div class="fb-text form-group field-text-1564028225108">
+          <label for="text-1564028225108" class="fb-text-label">echl:</label>
+          <input type="text" placeholder="E1cv12.." class="form-control" name="new-pre-echlA1" id="NewPreEchlA1">
+        </div>
+        <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Call Back Number:</label>
+          <input type="tel" placeholder="888-888-88888" class="form-control" name="NewPrePhoneA1" id="NewPrePhoneA1">
+        </div>
+        
+         <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Representative:</label>
+          <input type="tel" placeholder="CSR default" class="form-control" name="new-pre-phoneA1" id="NewPreRepA1">
+        </div>
+        <div class="fb-select form-group field-select-1564028499192">
+          <label for="new-pre-select" class="fb-select-label">Select</label>
+          <select class="form-control" name="select" id="selectA1">
+            <option selected="true">Select an Option</option>
+            <option value="Applicant call" id="select1newpresA1">Applicant call in </option>
+            <option value="Creditor call" id="select2newpresA1">Creditor call in </option>
+            <option value="Mortgage Lender Call" id="select3newpresA1">Mortgage Lender Call in</option>
+          </select>
+        </div>
+        <div class="fb-text form-group field-text-1564028645911">
+          <label for="text-1564028645911" class="fb-text-label">
+          <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Name on Rental Agreement:</label>
+          <input type="tel" placeholder="Appl /  Co-app" class="form-control" name="new-pre-nameA1" id="new-pre-nameA1">
+        </div>
+          
+          </label>
+          
+        </div>
+        <div class="fb-text form-group field-text-1564028992860">
+          <label for="text-1564028992860" class="fb-text-label">Move in date</label>
+          <input type="text" placeholder="MM/DD/YYYY" class="form-control" name="NewPremoveinDateA1" id="NewPreMoveA1">
+        </div>
+        <div class="fb-number form-group field-number-1564029014934">
+          <label for="number-1564029014934" class="fb-number-label">Payment Amount:</label>
+          <input type="number" placeholder="$$$" class="form-control" name="number-1564029014934A1" id="NewPrePayAmA1">
+        </div>
+        <div class="fb-text form-group field-text-1564029089141">
+          <label for="text-1564029089141" class="fb-text-label">LPM:</label>
+          <input type="text" placeholder="MM/DD/YYYY" name="text-1564029089141" id="NewPreLpmA1">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">NPD:</label>
+          <input type="text" placeholder="MM/DD/YYYY" class="form-control" name="text-1564029192850" id="NewPreNpdA1">
+        </div>
+        <div class="fb-textarea form-group field-textarea-1564029244644">
+          <label for="textarea-1564029244644" class="fb-textarea-label">Late Payments Over 30?</label>
+          <textarea type="textarea" class="form-control" name="textarea-1564029244644" id="NewPreLatesNotesA1"></textarea>
+        </div>
+      </div>
+    </form>
+                    <!-- *////////////////  TEXTFIELD    //////////////////-->
+
+
+
+                    </div>
+                    <!-- *////////////////  DIALOG    //////////////////-->
+
+                </div>
+
+                <!-- *////////////////  TAB3-1     //////////////////-->
+              
+              
+              
+              
+              
+
+                <!-- *////////////////  TAB3-2     //////////////////-->
+
+
+                <div id="tabs1-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                    <br> <br> <br>
+                    <button id="getdataB1">Regular Update</button>
+
+                    <div id="dialog-messageB1" title="Regular Update">
+
+                               <form id="rendered-formB1">
+      <div class="rendered-formB1">
+        <div class="fb-text form-group field-text-1564028225108">
+          <label for="text-1564028225108" class="fb-text-label">ECHL:</label>
+          <input type="text" placeholder="E1cv12.." class="form-control" name="regUpPrelEchl" id="regUpPrelEchlB1">
+        </div>
+        <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Call Back Number:</label>
+          <input type="tel" placeholder="888-888-88888" class="form-control" name="text-1564028435826" id="regUpPrelphoneB1">
+        </div>
+        <div class="fb-select form-group field-select-1564028499192">
+          <label for="select-1564028499192" class="fb-select-label">Select</label>
+          <select class="form-control" name="select-1564028499192" id="selectB1">
+          	<option selected="true">Select Option</option>
+            <option value="Applicant call" id="appCallB1">Applicant call</option>
+            <option value="Creditor call" id="creditCallB1">Creditor call</option>
+            <option value="Mortgage Lender Call" id="mortgageCallB1">Mortgage Lender Call</option>
+          </select>
+        </div>
+        <div class="fb-text form-group field-text-1564028645911">
+          <label for="text-1564028645911" class="fb-text-label">
+         <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Move In Date:</label>
+          <input type="tel" placeholder="Appl / Co-App" class="form-control" name="text-1564028435826" id="regUpPrelMoveB1">
+        </div>
+          </label>
+          
+        </div>
+        <div class="fb-text form-group field-text-1564028992860">
+          <label for="text-1564028992860" class="fb-text-label">Montly Payment Amount:</label>
+          <input type="text" placeholder="MM/DD/YYYY" class="form-control" name="text-1564028992860" id="regUpPrelPayB1">
+        </div>
+       
+        <div class="fb-text form-group field-text-1564029089141">
+          <label for="text-1564029089141" class="fb-text-label">LPM:</label>
+          <input type="text" class="form-control" name="text-1564029089141" id="regUpLpmB1">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">NPD:</label>
+          <input type="text" class="form-control" name="text-1564029192850" id="regUpNpdB1">
+        </div>
+        <div class="fb-textarea form-group field-textarea-1564029244644">
+          <label for="textarea-1564029244644" class="fb-textarea-label">Late Payments Over 30?</label>
+          <textarea type="textarea" class="form-control" name="textarea-1564029244644" id="regUpLatesB1"></textarea>
+        </div>
+      </div>
+    </form>
+                    </div>
+
+                    <br> <br> <br>
+
+                </div>
+                <!-- *////////////////  TAB3-2     //////////////////-->
+
+
+
+
+
+                <!-- *////////////////  TAB3     //////////////////-->
+
+            </div>
+
+        </div>
+        <!-- *////////////////  SHOWONE     //////////////////-->
+
+
+
+
+
+
+
+<!-- /////////////////////////////////////////////////////   SHOW TWO //////////////////////////////////////////////////////-->
+
+
+
+ <div id="showtwo" class="myDiv2" style="display: none;">
+
+            <!-- *////////////////  SHOWONE     //////////////////-->
+
+
+            <!-- *////////////////  PRESENT LANDLORD     //////////////////-->
+            <h1>Previous Landlord</h1> <br><br>
+
+
+
+
+            <!-- *///////     /////     TABS3        /////////////-->
+            <script type="text/javascript">
+                $(function() {
+                    $("#tabs2").tabs({
+                        event: "mouseover"
+                    });
+                });
+            </script>
+
+
+
+            <div id="tabs2" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+
+                <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all ui-sortable" role="tablist">
+                    <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs2-1" aria-labelledby="ui-id-1" aria-selected="true"><a href="#tabs2-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">New Trade</a></li>
+                    <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs1-2" aria-labelledby="ui-id-2" aria-selected="false"><a href="#tabs2-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Regular Update</a></li>
+
+                </ul>
+
+                <!-- *///////////////  TAB3-1     //////////////////-->
+                <div id="tabs2-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false">
+
+                    <br> <br> <br> <button id="getdataA2">New trade</button><br> <br> <br>
+
+
+
+
+
+                    <!-- *////////////////  DIALOG    //////////////////-->
+
+                    <div id="dialog-messageA2" title="New Trade Added">
+                      
+                      
+                      
+<!-- *////////////////  TEXTFIELD    //////////////////-->
+
+  <form id="rendered-formA2">
+      <div class="rendered-formA2">
+        <div class="fb-text form-group field-text-1564028225108">
+          <label for="text-1564028225108" class="fb-text-label">echl:</label>
+          <input type="text" placeholder="E1cv12.." class="form-control" name="new-pre-echlA2" id="NewPreEchlA2">
+        </div>
+        <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Call Back Number:</label>
+          <input type="tel" placeholder="888-888-88888" class="form-control" name="NewPrePhoneA2" id="NewPrePhoneA2">
+        </div>
+        
+         <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Representative:</label>
+          <input type="tel" placeholder="CSR default" class="form-control" name="new-pre-phoneA2" id="NewPreRepA2">
+        </div>
+        <div class="fb-select form-group field-select-1564028499192">
+          <label for="new-pre-select" class="fb-select-label">Select</label>
+          <select class="form-control" name="selectA2" id="selectA2">
+            <option selected="true">Select an Option</option>
+            <option value="Applicant call" id="select1newpresA2">Applicant call in </option>
+            <option value="Creditor call" id="select2newpresA2">Creditor call in </option>
+            <option value="Mortgage Lender Call" id="select3newpresA2">Mortgage Lender Call in</option>
+          </select>
+        </div>
+        <div class="fb-text form-group field-text-1564028645911">
+          <label for="text-1564028645911" class="fb-text-label">
+          <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Name on Rental Agreement:</label>
+          <input type="tel" placeholder="Appl /  Co-app" class="form-control" name="new-pre-nameA2" id="new-pre-nameA2">
+        </div>
+          
+          </label>
+          
+        </div>
+        <div class="fb-text form-group field-text-1564028992860">
+          <label for="text-1564028992860" class="fb-text-label">Move in date</label>
+          <input type="text" placeholder="MM/DD/YYYY" class="form-control" name="NewPremoveinDateA2" id="NewPreMoveA2">
+        </div>
+        <div class="fb-number form-group field-number-1564029014934">
+          <label for="number-1564029014934" class="fb-number-label">Payment Amount:</label>
+          <input type="number" placeholder="$$$" class="form-control" name="number-1564029014934A2" id="NewPrePayAmA2">
+        </div>
+        <div class="fb-text form-group field-text-1564029089141">
+          <label for="text-1564029089141" class="fb-text-label">LPM:</label>
+          <input type="text" placeholder="MM/DD/YYYY" name="text-1564029089141" id="NewPreLpmA2">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">NPD:</label>
+          <input type="text" placeholder="MM/DD/YYYY" class="form-control" name="text-1564029192850" id="NewPreNpdA2">
+        </div>
+        <div class="fb-textarea form-group field-textarea-1564029244644">
+          <label for="textarea-1564029244644" class="fb-textarea-label">Late Payments Over 30?</label>
+          <textarea type="textarea" class="form-control" name="textarea-1564029244644" id="NewPreLatesNotesA2"></textarea>
+        </div>
+      </div>
+    </form>
+                    <!-- *////////////////  TEXTFIELD    //////////////////-->
+
+
+
+                    </div>
+                    <!-- *////////////////  DIALOG    //////////////////-->
+
+                </div>
+
+                <!-- *////////////////  TAB3-1     //////////////////-->
+              
+              
+              
+              
+              
+
+                <!-- *////////////////  TAB3-2     //////////////////-->
+
+
+                <div id="tabs2-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                    <br> <br> <br>
+                    <button id="getdataB2">Regular Update</button>
+
+                    <div id="dialog-message2B" title="Regular Update">
+
+                               <form id="rendered-formB2">
+      <div class="rendered-form2B">
+        <div class="fb-text form-group field-text-1564028225108">
+          <label for="text-1564028225108" class="fb-text-label">ECHL:</label>
+          <input type="text" placeholder="E1cv12.." class="form-control" name="regUpPrelEchlB2" id="regUpPrelEchlB2">
+        </div>
+        <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Call Back Number:</label>
+          <input type="tel" placeholder="888-888-88888" class="form-control" name="text-1564028435826" id="regUpPrelphoneB2">
+        </div>
+        <div class="fb-select form-group field-select-1564028499192">
+          <label for="select-1564028499192" class="fb-select-label">Select</label>
+          <select class="form-control" name="select-1564028499192" id="selectB2">
+            <option selected="true">Select Option</option>
+            <option value="Applicant call" id="appCall1B2">Applicant call</option>
+            <option value="Creditor call" id="creditCall1B2">Creditor call</option>
+            <option value="Mortgage Lender Call" id="mortgageCall1B2">Mortgage Lender Call</option>
+          </select>
+        </div>
+        <div class="fb-text form-group field-text-1564028645911">
+          <label for="text-1564028645911" class="fb-text-label">
+         <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Move In Date:</label>
+          <input type="tel" placeholder="Appl / Co-App" class="form-control" name="text-1564028435826" id="regUpPrelMoveB2">
+        </div>
+          </label>
+          
+        </div>
+        <div class="fb-text form-group field-text-1564028992860">
+          <label for="text-1564028992860" class="fb-text-label">Montly Payment Amount:</label>
+          <input type="text" placeholder="MM/DD/YYYY" class="form-control" name="text-1564028992860" id="regUpPrelPayB2">
+        </div>
+       
+        <div class="fb-text form-group field-text-1564029089141">
+          <label for="text-1564029089141" class="fb-text-label">LPM:</label>
+          <input type="text" class="form-control" name="text-1564029089141" id="regUpLpmB2">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">NPD:</label>
+          <input type="text" class="form-control" name="text-1564029192850" id="regUpNpdB2">
+        </div>
+        <div class="fb-textarea form-group field-textarea-1564029244644">
+          <label for="textarea-1564029244644" class="fb-textarea-label">Late Payments Over 30?</label>
+          <textarea type="textarea" class="form-control" name="textarea-1564029244644" id="regUpLatesB2"></textarea>
+        </div>
+      </div>
+    </form>
+                    </div>
+
+                    <br> <br> <br>
+
+                </div>
+                <!-- *////////////////  TAB3-2     //////////////////-->
+
+
+
+
+
+
+
+
+                <!-- *////////////////  TAB3     //////////////////-->
+
+            </div>
+
+        </div>
+        <!-- *////////////////  SHOWTWO    //////////////////-->
+
+
+
+<!-- /////////////////////////////////////////////////////   SHOW THREE //////////////////////////////////////////////////////-->
+
+
+
+ <div id="showThree" class="myDiv2" style="display: none;">
+
+            <!-- *////////////////  SHOWONE     //////////////////-->
+
+
+            <!-- *////////////////  PRESENT LANDLORD     //////////////////-->
+            <h1>Utility</h1> <br><br>
+
+
+
+
+            <!-- *///////     /////     TABS3        /////////////-->
+            <script type="text/javascript">
+                $(function() {
+                    $("#tabs3").tabs({
+                        event: "mouseover"
+                    });
+                });
+            </script>
+
+
+
+            <div id="tabs3" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+
+                <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all ui-sortable" role="tablist">
+                    <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs1-1" aria-labelledby="ui-id-1" aria-selected="true"><a href="#tabs3-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">New Trade</a></li>
+                    <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs3-2" aria-labelledby="ui-id-2" aria-selected="false"><a href="#tabs3-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Regular Update</a></li>
+
+                </ul>
+
+                <!-- *///////////////  TAB3-1     //////////////////-->
+                <div id="tabs3-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false">
+
+                    <br> <br> <br> <button id="getdataA3">New trade</button><br> <br> <br>
+
+
+
+
+
+                    <!-- *////////////////  DIALOG    //////////////////-->
+
+                    <div id="dialog-messageA3" title="New Trade Added">
+                      
+                      
+                      
+<!-- *////////////////  TEXTFIELD    //////////////////-->
+
+  <form id="rendered-formA3">
+      <div class="rendered-formA3">
+        <div class="fb-text form-group field-text-1564028225108">
+          <label for="text-1564028225108" class="fb-text-label">echl:</label>
+          <input type="text" placeholder="E1cv12.." class="form-control" name="new-pre-echlA2" id="NewPreEchlA3">
+        </div>
+        <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Call Back Number:</label>
+          <input type="tel" placeholder="888-888-88888" class="form-control" name="NewPrePhoneA3" id="NewPrePhoneA3">
+        </div>
+        
+         <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Representative:</label>
+          <input type="tel" placeholder="CSR default" class="form-control" name="new-pre-phoneA3" id="NewPreRepA3">
+        </div>
+        <div class="fb-select form-group field-select-1564028499192">
+          <label for="new-pre-select" class="fb-select-label">Select</label>
+          <select class="form-control" name="select" id="selectA3">
+            <option selected="true">Select an Option</option>
+            <option value="Applicant call" id="select1newpresA3">Applicant call in </option>
+            <option value="Creditor call" id="select2newpresA3">Creditor call in </option>
+            <option value="Mortgage Lender Call" id="select3newpresA3">Mortgage Lender Call in</option>
+          </select>
+        </div>
+        <div class="fb-text form-group field-text-1564028645911">
+          <label for="text-1564028645911" class="fb-text-label">
+          <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Name on Rental Agreement:</label>
+          <input type="tel" placeholder="Appl /  Co-app" class="form-control" name="new-pre-nameA3" id="new-pre-nameA3">
+        </div>
+          
+          </label>
+          
+        </div>
+        <div class="fb-text form-group field-text-1564028992860">
+          <label for="text-1564028992860" class="fb-text-label">Move in date</label>
+          <input type="text" placeholder="MM/DD/YYYY" class="form-control" name="NewPremoveinDateA3" id="NewPreMoveA3">
+        </div>
+        <div class="fb-number form-group field-number-1564029014934">
+          <label for="number-1564029014934" class="fb-number-label">Payment Amount:</label>
+          <input type="number" placeholder="$$$" class="form-control" name="number-1564029014934A3" id="NewPrePayAmA3">
+        </div>
+        <div class="fb-text form-group field-text-1564029089141">
+          <label for="text-1564029089141" class="fb-text-label">LPM:</label>
+          <input type="text" placeholder="MM/DD/YYYY" name="text-1564029089141" id="NewPreLpmA2">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">NPD:</label>
+          <input type="text" placeholder="MM/DD/YYYY" class="form-control" name="text-1564029192850" id="NewPreNpdA3">
+        </div>
+        <div class="fb-textarea form-group field-textarea-1564029244644">
+          <label for="textarea-1564029244644" class="fb-textarea-label">Late Payments Over 30?</label>
+          <textarea type="textarea" class="form-control" name="textarea-1564029244644" id="NewPreLatesNotesA3"></textarea>
+        </div>
+      </div>
+    </form>
+                    <!-- *////////////////  TEXTFIELD    //////////////////-->
+
+
+
+                    </div>
+                    <!-- *////////////////  DIALOG    //////////////////-->
+
+                </div>
+
+                <!-- *////////////////  TAB3-1     //////////////////-->
+              
+              
+              
+              
+              
+
+                <!-- *////////////////  TAB3-2     //////////////////-->
+
+
+                <div id="tabs3-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                    <br> <br> <br>
+                    <button id="getdataB3">Regular Update</button>
+
+                    <div id="dialog-message2B" title="Regular Update">
+
+                               <form id="rendered-formB3">
+      <div class="rendered-formB3">
+        <div class="fb-text form-group field-text-1564028225108">
+          <label for="text-1564028225108" class="fb-text-label">ECHL:</label>
+          <input type="text" placeholder="E1cv12.." class="form-control" name="regUpPrelEchlB3" id="regUpPrelEchlB3">
+        </div>
+        <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Call Back Number:</label>
+          <input type="tel" placeholder="888-888-88888" class="form-control" name="text-1564028435826" id="regUpPrelphoneB3">
+        </div>
+        <div class="fb-select form-group field-select-1564028499192">
+          <label for="select-1564028499192" class="fb-select-label">Select</label>
+          <select class="form-control" name="select-1564028499192" id="selectB2">
+            <option selected="true">Select Option</option>
+            <option value="Applicant call" id="appCall1B2">Applicant call</option>
+            <option value="Creditor call" id="creditCall1B2">Creditor call</option>
+            <option value="Mortgage Lender Call" id="mortgageCall1B2">Mortgage Lender Call</option>
+          </select>
+        </div>
+        <div class="fb-text form-group field-text-1564028645911">
+          <label for="text-1564028645911" class="fb-text-label">
+         <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Move In Date:</label>
+          <input type="tel" placeholder="Appl / Co-App" class="form-control" name="text-1564028435826" id="regUpPrelMoveB2">
+        </div>
+          </label>
+          
+        </div>
+        <div class="fb-text form-group field-text-1564028992860">
+          <label for="text-1564028992860" class="fb-text-label">Montly Payment Amount:</label>
+          <input type="text" placeholder="MM/DD/YYYY" class="form-control" name="text-1564028992860" id="regUpPrelPayB2">
+        </div>
+       
+        <div class="fb-text form-group field-text-1564029089141">
+          <label for="text-1564029089141" class="fb-text-label">LPM:</label>
+          <input type="text" class="form-control" name="text-1564029089141" id="regUpLpmB2">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">NPD:</label>
+          <input type="text" class="form-control" name="text-1564029192850" id="regUpNpdB2">
+        </div>
+        <div class="fb-textarea form-group field-textarea-1564029244644">
+          <label for="textarea-1564029244644" class="fb-textarea-label">Late Payments Over 30?</label>
+          <textarea type="textarea" class="form-control" name="textarea-1564029244644" id="regUpLatesB2"></textarea>
+        </div>
+      </div>
+    </form>
+                    </div>
+
+                    <br> <br> <br>
+
+                </div>
+                <!-- *////////////////  TAB3-2     //////////////////-->
+
+
+
+
+
+
+
+
+                <!-- *////////////////  TAB3     //////////////////-->
+
+            </div>
+
+        </div>
+        <!-- *////////////////  SHOWTHREE     //////////////////-->
+
+
+
+
+<!-- /////////////////////////////////////////////////////    SHOWFOUR //////////////////////////////////////////////////////-->
+
+
+
+ <div id="showFour" class="myDiv2" style="display: none;">
+
+            <!-- *////////////////  SHOWONE     //////////////////-->
+
+
+            <!-- *////////////////  insurance     //////////////////-->
+            <h1>Insurance</h1> <br><br>
+
+
+
+
+            <!-- *///////     /////     TABS3        /////////////-->
+            <script type="text/javascript">
+                $(function() {
+                    $("#tabs4").tabs({
+                        event: "mouseover"
+                    });
+                });
+            </script>
+
+
+
+            <div id="tabs4" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+
+                <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all ui-sortable" role="tablist">
+                    <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs1-1" aria-labelledby="ui-id-1" aria-selected="true"><a href="#tabs4-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">New Trade</a></li>
+                    <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs4-2" aria-labelledby="ui-id-2" aria-selected="false"><a href="#tabs4-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Regular Update</a></li>
+
+                </ul>
+
+                <!-- *///////////////  TAB3-1     //////////////////-->
+                <div id="tabs4-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false">
+
+                    <br> <br> <br> <button id="getdataA4">New trade</button><br> <br> <br>
+
+
+
+
+
+                    <!-- *////////////////  DIALOG    //////////////////-->
+
+                    <div id="dialog-messageA4" title="New Trade Added">
+                      
+                      
+                      
+<!-- *////////////////  TEXTFIELD    //////////////////-->
+
+  <form id="rendered-formA4">
+      <div class="rendered-formA4">
+        <div class="fb-text form-group field-text-1564028225108">
+          <label for="text-1564028225108" class="fb-text-label">echl:</label>
+          <input type="text" placeholder="E1cv12.." class="form-control" name="new-pre-echlA4" id="NewPreEchlA4">
+        </div>
+        <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Call Back Number:</label>
+          <input type="tel" placeholder="888-888-88888" class="form-control" name="NewPrePhoneA4" id="NewPrePhoneA4">
+        </div>
+        
+         <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Representative:</label>
+          <input type="tel" placeholder="CSR default" class="form-control" name="new-pre-phoneA4" id="NewPreRepA4">
+        </div>
+        <div class="fb-select form-group field-select-1564028499192">
+          <label for="new-pre-select" class="fb-select-label">Select</label>
+          <select class="form-control" name="select" id="selectA4">
+            <option selected="true">Select an Option</option>
+            <option value="Applicant call" id="select1newpresA4">Applicant call in </option>
+            <option value="Creditor call" id="select2newpresA4">Creditor call in </option>
+            <option value="Mortgage Lender Call" id="select3newpresA4">Mortgage Lender Call in</option>
+          </select>
+        </div>
+        <div class="fb-text form-group field-text-1564028645911">
+          <label for="text-1564028645911" class="fb-text-label">
+          <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Name on Rental Agreement:</label>
+          <input type="tel" placeholder="Appl /  Co-app" class="form-control" name="new-pre-nameA3" id="new-pre-nameA4">
+        </div>
+          
+          </label>
+          
+        </div>
+        <div class="fb-text form-group field-text-1564028992860">
+          <label for="text-1564028992860" class="fb-text-label">Move in date</label>
+          <input type="text" placeholder="MM/DD/YYYY" class="form-control" name="NewPremoveinDateA3" id="NewPreMoveA4">
+        </div>
+        <div class="fb-number form-group field-number-1564029014934">
+          <label for="number-1564029014934" class="fb-number-label">Payment Amount:</label>
+          <input type="number" placeholder="$$$" class="form-control" name="number-1564029014934A3" id="NewPrePayAmA4">
+        </div>
+        <div class="fb-text form-group field-text-1564029089141">
+          <label for="text-1564029089141" class="fb-text-label">LPM:</label>
+          <input type="text" placeholder="MM/DD/YYYY" name="text-1564029089141" id="NewPreLpmA4">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">NPD:</label>
+          <input type="text" placeholder="MM/DD/YYYY" class="form-control" name="text-1564029192850" id="NewPreNpdA4">
+        </div>
+        <div class="fb-textarea form-group field-textarea-1564029244644">
+          <label for="textarea-1564029244644" class="fb-textarea-label">Late Payments Over 30?</label>
+          <textarea type="textarea" class="form-control" name="textarea-1564029244644" id="NewPreLatesNotesA4"></textarea>
+        </div>
+      </div>
+    </form>
+                    <!-- *////////////////  TEXTFIELD    //////////////////-->
+
+
+
+                    </div>
+                    <!-- *////////////////  DIALOG    //////////////////-->
+
+                </div>
+
+                <!-- *////////////////  TAB3-1     //////////////////-->
+              
+              
+              
+              
+              
+
+                <!-- *////////////////  TAB3-2     //////////////////-->
+
+
+                <div id="tabs4-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                    <br> <br> <br>
+                    <button id="getdataB4">Regular Update</button>
+
+                    <div id="dialog-messageB4" title="Regular Update">
+
+                               <form id="rendered-formB2">
+      <div class="rendered-formB4">
+        <div class="fb-text form-group field-text-1564028225108">
+          <label for="text-1564028225108" class="fb-text-label">ECHL:</label>
+          <input type="text" placeholder="E1cv12.." class="form-control" name="regUpPrelEchlB4" id="regUpPrelEchlB4">
+        </div>
+        <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Call Back Number:</label>
+          <input type="tel" placeholder="888-888-88888" class="form-control" name="text-1564028435826" id="regUpPrelphoneB4">
+        </div>
+        <div class="fb-select form-group field-select-1564028499192">
+          <label for="select-1564028499192" class="fb-select-label">Select</label>
+          <select class="form-control" name="select-1564028499192" id="selectB4">
+            <option selected="true">Select Option</option>
+            <option value="Applicant call" id="appCall1B4">Applicant call</option>
+            <option value="Creditor call" id="creditCall1B4">Creditor call</option>
+            <option value="Mortgage Lender Call" id="mortgageCall1B4">Mortgage Lender Call</option>
+          </select>
+        </div>
+        <div class="fb-text form-group field-text-1564028645911">
+          <label for="text-1564028645911" class="fb-text-label">
+         <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Move In Date:</label>
+          <input type="tel" placeholder="Appl / Co-App" class="form-control" name="text-1564028435826" id="regUpPrelMoveB4">
+        </div>
+          </label>
+          
+        </div>
+        <div class="fb-text form-group field-text-1564028992860">
+          <label for="text-1564028992860" class="fb-text-label">Montly Payment Amount:</label>
+          <input type="text" placeholder="MM/DD/YYYY" class="form-control" name="text-1564028992860" id="regUpPrelPayB4">
+        </div>
+       
+        <div class="fb-text form-group field-text-1564029089141">
+          <label for="text-1564029089141" class="fb-text-label">LPM:</label>
+          <input type="text" class="form-control" name="text-1564029089141" id="regUpLpmB4">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">NPD:</label>
+          <input type="text" class="form-control" name="text-1564029192850" id="regUpNpdB4">
+        </div>
+        <div class="fb-textarea form-group field-textarea-1564029244644">
+          <label for="textarea-1564029244644" class="fb-textarea-label">Late Payments Over 30?</label>
+          <textarea type="textarea" class="form-control" name="textarea-1564029244644" id="regUpLatesB4"></textarea>
+        </div>
+      </div>
+    </form>
+                    </div>
+
+                    <br> <br> <br>
+
+                </div>
+                <!-- *////////////////  TAB3-2     //////////////////-->
+
+
+
+
+
+
+
+
+                <!-- *////////////////  TAB3     //////////////////-->
+
+            </div>
+
+        </div>
+        <!-- *////////////////  SHOWFOUR     //////////////////-->
+
+
+
+
+<!-- /////////////////////////////////////////////////////    SHOWFIVE //////////////////////////////////////////////////////-->
+
+
+
+ <div id="showFive" class="myDiv2" style="display: none;">
+
+            <!-- *////////////////  SHOWONE     //////////////////-->
+
+
+            <!-- *////////////////  insurance     //////////////////-->
+            <h1>Credit Cards</h1> <br><br>
+
+
+
+
+            <!-- *///////     /////     TABS3        /////////////-->
+            <script type="text/javascript">
+                $(function() {
+                    $("#tabs5").tabs({
+                        event: "mouseover"
+                    });
+                });
+            </script>
+
+
+
+            <div id="tabs5" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+
+                <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all ui-sortable" role="tablist">
+                    <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs1-1" aria-labelledby="ui-id-1" aria-selected="true"><a href="#tabs5-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">New Trade</a></li>
+                    <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs5-2" aria-labelledby="ui-id-2" aria-selected="false"><a href="#tabs5-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Regular Update</a></li>
+
+                </ul>
+
+                <!-- *///////////////  TAB3-1     //////////////////-->
+                <div id="tabs5-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false">
+
+                    <br> <br> <br> <button id="getdataA5">New trade</button><br> <br> <br>
+
+
+
+
+
+                    <!-- *////////////////  DIALOG    //////////////////-->
+
+                    <div id="dialog-messageA5" title="New Trade Added">
+                      
+                      
+                      
+<!-- *////////////////  TEXTFIELD    //////////////////-->
+
+  <form id="rendered-formA5">
+      <div class="rendered-formA5">
+        <div class="fb-text form-group field-text-1564028225108">
+          <label for="text-1564028225108" class="fb-text-label">echl:</label>
+          <input type="text" placeholder="E1cv12.." class="form-control" name="CreechlA5" id="CreEchlA5">
+        </div>
+        <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Call Back Number:</label>
+          <input type="tel" placeholder="888-888-88888" class="form-control" name="CrePhoneA5" id="CrePhoneA5">
+        </div>
+        
+         <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Representative:</label>
+          <input type="tel" placeholder="CSR default" class="form-control" name="CreRepA5" id="CreRepA5">
+        </div>
+        <div class="fb-select form-group field-select-1564028499192">
+          <label for="new-pre-select" class="fb-select-label">Select</label>
+          <select class="form-control" name="select" id="selectA5">
+            <option selected="true">Select an Option</option>
+            <option value="Applicant call" id="select1newpresA5">Applicant call in </option>
+            <option value="Creditor call" id="select2newpresA5">Creditor call in </option>
+            <option value="Mortgage Lender Call" id="select3newpresA5">Mortgage Lender Call in</option>
+          </select>
+        </div>
+        <div class="fb-text form-group field-text-1564028645911">
+          <label for="text-1564028645911" class="fb-text-label">
+          <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Confirm acct is borr or co-borr
+:</label>
+          <input type="tel" placeholder="Appl /  Co-app" class="form-control" name="new-pre-nameA5" id="CreNameA5">
+        </div>
+          
+          </label>
+          
+        </div>
+        <div class="fb-text form-group field-text-1564028992860">
+          <label for="text-1564028992860" class="fb-text-label">Loan type
+:</label>
+          <input type="text" placeholder="Regular Credit Card" class="form-control" name="LoanTypeA5" id="LoanTypeA5">
+        </div>
+        <div class="fb-number form-group field-number-1564029014934">
+          <label for="number-1564029014934" class="fb-number-label">Date Open:</label>
+          <input type="number" placeholder="MM/DD/YYYY" class="form-control" name="number-1564029014934A3" id="DateOpenA5">
+        </div>
+        <div class="fb-text form-group field-text-1564029089141">
+          <label for="text-1564029089141" class="fb-text-label">Credit Limit:</label>
+          <input type="text" placeholder="$$$" name="text-1564029089141" id="CreLimitA5">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">Balance:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CreBalA5">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">Payment Amount:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CrePayAmA5">
+        </div>
+           <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">LPM:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CreLpmA5">
+        </div>
+
+           <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">NPD:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CreNpdA5">
+        </div>
+
+
+        <div class="fb-textarea form-group field-textarea-1564029244644">
+          <label for="textarea-1564029244644" class="fb-textarea-label">Late Payments Over 30?</label>
+          <textarea type="textarea" class="form-control" name="textarea-1564029244644" id="CreLatePayA5"></textarea>
+        </div>
+      </div>
+    </form>
+                    <!-- *////////////////  TEXTFIELD    //////////////////-->
+
+
+
+                    </div>
+                    <!-- *////////////////  DIALOG    //////////////////-->
+
+                </div>
+
+                <!-- *////////////////  TAB3-1     //////////////////-->
+              
+              
+              
+              
+              
+
+                <!-- *////////////////  TAB3-2     //////////////////-->
+
+
+                <div id="tabs5-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                    <br> <br> <br>
+                    <button id="getdataB5">Regular Update</button>
+
+                    <div id="dialog-messageB5" title="Regular Update">
+
+                               <form id="rendered-formB5">
+      <div class="rendered-formB5">
+        <div class="fb-text form-group field-text-1564028225108">
+          <label for="text-1564028225108" class="fb-text-label">ECHL:</label>
+          <input type="text" placeholder="E1cv12.." class="form-control" name="regUpPrelEchlB4" id="regUpPrelEchlB5">
+        </div>
+        <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Call Back Number:</label>
+          <input type="tel" placeholder="888-888-88888" class="form-control" name="text-1564028435826" id="regUpPrelphoneB5">
+        </div>
+        <div class="fb-select form-group field-select-1564028499192">
+          <label for="select-1564028499192" class="fb-select-label">Select</label>
+          <select class="form-control" name="select-1564028499192" id="selectB5">
+            <option selected="true">Select Option</option>
+            <option value="Applicant call" id="appCall1B5">Applicant call</option>
+            <option value="Creditor call" id="creditCall1B5">Creditor call</option>
+            <option value="Mortgage Lender Call" id="mortgageCall1B5">Mortgage Lender Call</option>
+          </select>
+        </div>
+        <div class="fb-text form-group field-text-1564028645911">
+          <label for="text-1564028645911" class="fb-text-label">
+         <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Balance:</label>
+          <input type="tel" placeholder="Appl / Co-App" class="form-control" name="text-1564028435826" id="regBalB5">
+        </div>
+          </label>
+          
+        </div>
+        <div class="fb-text form-group field-text-1564028992860">
+          <label for="text-1564028992860" class="fb-text-label">Montly Payment Amount:</label>
+          <input type="text" placeholder="MM/DD/YYYY" class="form-control" name="text-1564028992860" id="regUpCrelPayB5">
+        </div>
+       
+        <div class="fb-text form-group field-text-1564029089141">
+          <label for="text-1564029089141" class="fb-text-label">LPM:</label>
+          <input type="text" class="form-control" name="text-1564029089141" id="regCreLpmB5">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">NPD:</label>
+          <input type="text" class="form-control" name="text-1564029192850" id="regCreNpdB5">
+        </div>
+        <div class="fb-textarea form-group field-textarea-1564029244644">
+          <label for="textarea-1564029244644" class="fb-textarea-label">Late Payments Over 30?</label>
+          <textarea type="textarea" class="form-control" name="textarea-1564029244644" id="regCreLatesB5"></textarea>
+        </div>
+      </div>
+    </form>
+                    </div>
+
+                    <br> <br> <br>
+
+                </div>
+                <!-- *////////////////  TAB3-2     //////////////////-->
+
+
+
+
+
+
+
+
+                <!-- *////////////////  TAB3     //////////////////-->
+
+            </div>
+
+        </div>
+        <!-- *////////////////  SHOWFIVE     //////////////////-->
+
+      
+
+<!-- /////////////////////////////////////////////////////    SHOWSIX //////////////////////////////////////////////////////-->
+
+
+
+ <div id="showSix" class="myDiv2" style="display: none;">
+
+            <!-- *////////////////  SHOWONE     //////////////////-->
+
+
+            <!-- *////////////////  insurance     //////////////////-->
+            <h1>Credit Cards 0 Bal</h1> <br><br>
+
+
+
+
+            <!-- *///////     /////     TABS3        /////////////-->
+            <script type="text/javascript">
+                $(function() {
+                    $("#tabs5").tabs({
+                        event: "mouseover"
+                    });
+                });
+            </script>
+
+
+
+            <div id="tabs5" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+
+                <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all ui-sortable" role="tablist">
+                    <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs1-1" aria-labelledby="ui-id-1" aria-selected="true"><a href="#tabs5-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">New Trade</a></li>
+                    <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs5-2" aria-labelledby="ui-id-2" aria-selected="false"><a href="#tabs5-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Regular Update</a></li>
+
+                </ul>
+
+                <!-- *///////////////  TAB3-1     //////////////////-->
+                <div id="tabs5-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false">
+
+                    <br> <br> <br> <button id="getdataA5">New trade</button><br> <br> <br>
+
+
+
+
+
+                    <!-- *////////////////  DIALOG    //////////////////-->
+
+                    <div id="dialog-messageA5" title="New Trade Added">
+                      
+                      
+                      
+<!-- *////////////////  TEXTFIELD    //////////////////-->
+
+  <form id="rendered-formA5">
+      <div class="rendered-formA5">
+        <div class="fb-text form-group field-text-1564028225108">
+          <label for="text-1564028225108" class="fb-text-label">echl:</label>
+          <input type="text" placeholder="E1cv12.." class="form-control" name="CreechlA5" id="CreEchlA5">
+        </div>
+        <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Call Back Number:</label>
+          <input type="tel" placeholder="888-888-88888" class="form-control" name="CrePhoneA5" id="CrePhoneA5">
+        </div>
+        
+         <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Representative:</label>
+          <input type="tel" placeholder="CSR default" class="form-control" name="CreRepA5" id="CreRepA5">
+        </div>
+        <div class="fb-select form-group field-select-1564028499192">
+          <label for="new-pre-select" class="fb-select-label">Select</label>
+          <select class="form-control" name="select" id="selectA5">
+            <option selected="true">Select an Option</option>
+            <option value="Applicant call" id="select1newpresA5">Applicant call in </option>
+            <option value="Creditor call" id="select2newpresA5">Creditor call in </option>
+            <option value="Mortgage Lender Call" id="select3newpresA5">Mortgage Lender Call in</option>
+          </select>
+        </div>
+        <div class="fb-text form-group field-text-1564028645911">
+          <label for="text-1564028645911" class="fb-text-label">
+          <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Confirm acct is borr or co-borr
+:</label>
+          <input type="tel" placeholder="Appl /  Co-app" class="form-control" name="new-pre-nameA5" id="CreNameA5">
+        </div>
+          
+          </label>
+          
+        </div>
+        <div class="fb-text form-group field-text-1564028992860">
+          <label for="text-1564028992860" class="fb-text-label">Loan type
+:</label>
+          <input type="text" placeholder="Regular Credit Card" class="form-control" name="LoanTypeA5" id="LoanTypeA5">
+        </div>
+        <div class="fb-number form-group field-number-1564029014934">
+          <label for="number-1564029014934" class="fb-number-label">Date Open:</label>
+          <input type="number" placeholder="MM/DD/YYYY" class="form-control" name="number-1564029014934A3" id="DateOpenA5">
+        </div>
+        <div class="fb-text form-group field-text-1564029089141">
+          <label for="text-1564029089141" class="fb-text-label">Credit Limit:</label>
+          <input type="text" placeholder="$$$" name="text-1564029089141" id="CreLimitA5">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">Balance:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CreBalA5">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">Payment Amount:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CrePayAmA5">
+        </div>
+           <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">LPM:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CreLpmA5">
+        </div>
+
+           <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">NPD:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CreNpdA5">
+        </div>
+
+
+        <div class="fb-textarea form-group field-textarea-1564029244644">
+          <label for="textarea-1564029244644" class="fb-textarea-label">Late Payments Over 30?</label>
+          <textarea type="textarea" class="form-control" name="textarea-1564029244644" id="CreLatePayA5"></textarea>
+        </div>
+      </div>
+    </form>
+                    <!-- *////////////////  TEXTFIELD    //////////////////-->
+
+
+
+                    </div>
+                    <!-- *////////////////  DIALOG    //////////////////-->
+
+                </div>
+
+                <!-- *////////////////  TAB3-1     //////////////////-->
+              
+              
+              
+              
+              
+
+                <!-- *////////////////  TAB3-2     //////////////////-->
+
+
+                <div id="tabs5-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                    <br> <br> <br>
+                    <button id="getdataB5">Regular Update</button>
+
+                    <div id="dialog-messageB5" title="Regular Update">
+
+                               <form id="rendered-formB5">
+      <div class="rendered-formB5">
+        <div class="fb-text form-group field-text-1564028225108">
+          <label for="text-1564028225108" class="fb-text-label">ECHL:</label>
+          <input type="text" placeholder="E1cv12.." class="form-control" name="regUpPrelEchlB4" id="regUpPrelEchlB5">
+        </div>
+        <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Call Back Number:</label>
+          <input type="tel" placeholder="888-888-88888" class="form-control" name="text-1564028435826" id="regUpPrelphoneB5">
+        </div>
+        <div class="fb-select form-group field-select-1564028499192">
+          <label for="select-1564028499192" class="fb-select-label">Select</label>
+          <select class="form-control" name="select-1564028499192" id="selectB5">
+            <option selected="true">Select Option</option>
+            <option value="Applicant call" id="appCall1B5">Applicant call</option>
+            <option value="Creditor call" id="creditCall1B5">Creditor call</option>
+            <option value="Mortgage Lender Call" id="mortgageCall1B5">Mortgage Lender Call</option>
+          </select>
+        </div>
+        <div class="fb-text form-group field-text-1564028645911">
+          <label for="text-1564028645911" class="fb-text-label">
+         <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Balance:</label>
+          <input type="tel" placeholder="Appl / Co-App" class="form-control" name="text-1564028435826" id="regBalB5">
+        </div>
+          </label>
+          
+        </div>
+        <div class="fb-text form-group field-text-1564028992860">
+          <label for="text-1564028992860" class="fb-text-label">Montly Payment Amount:</label>
+          <input type="text" placeholder="MM/DD/YYYY" class="form-control" name="text-1564028992860" id="regUpCrelPayB5">
+        </div>
+       
+        <div class="fb-text form-group field-text-1564029089141">
+          <label for="text-1564029089141" class="fb-text-label">LPM:</label>
+          <input type="text" class="form-control" name="text-1564029089141" id="regCreLpmB5">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">NPD:</label>
+          <input type="text" class="form-control" name="text-1564029192850" id="regCreNpdB5">
+        </div>
+        <div class="fb-textarea form-group field-textarea-1564029244644">
+          <label for="textarea-1564029244644" class="fb-textarea-label">Late Payments Over 30?</label>
+          <textarea type="textarea" class="form-control" name="textarea-1564029244644" id="regCreLatesB5"></textarea>
+        </div>
+      </div>
+    </form>
+                    </div>
+
+                    <br> <br> <br>
+
+                </div>
+                <!-- *////////////////  TAB3-2     //////////////////-->
+
+
+
+
+
+
+
+
+                <!-- *////////////////  TAB3     //////////////////-->
+
+            </div>
+
+        </div>
+        <!-- *////////////////  SHOWSIX    //////////////////-->
+
+
+
+<!-- /////////////////////////////////////////////////////    SHOWSEVEN //////////////////////////////////////////////////////-->
+
+
+
+ <div id="showSeven" class="myDiv2" style="display: none;">
+
+            <!-- *////////////////  SHOWONE     //////////////////-->
+
+
+            <!-- *////////////////  insurance     //////////////////-->
+            <h1>CREDIT CARD / Too new to rate</h1> <br><br>
+
+
+
+
+            <!-- *///////     /////     TABS3        /////////////-->
+            <script type="text/javascript">
+                $(function() {
+                    $("#tabs5").tabs({
+                        event: "mouseover"
+                    });
+                });
+            </script>
+
+
+
+            <div id="tabs5" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+
+                <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all ui-sortable" role="tablist">
+                    <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs1-1" aria-labelledby="ui-id-1" aria-selected="true"><a href="#tabs5-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">New Trade</a></li>
+                    <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs5-2" aria-labelledby="ui-id-2" aria-selected="false"><a href="#tabs5-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Regular Update</a></li>
+
+                </ul>
+
+                <!-- *///////////////  TAB3-1     //////////////////-->
+                <div id="tabs5-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false">
+
+                    <br> <br> <br> <button id="getdataA5">New trade</button><br> <br> <br>
+
+
+
+
+
+                    <!-- *////////////////  DIALOG    //////////////////-->
+
+                    <div id="dialog-messageA5" title="New Trade Added">
+                      
+                      
+                      
+<!-- *////////////////  TEXTFIELD    //////////////////-->
+
+  <form id="rendered-formA5">
+      <div class="rendered-formA5">
+        <div class="fb-text form-group field-text-1564028225108">
+          <label for="text-1564028225108" class="fb-text-label">echl:</label>
+          <input type="text" placeholder="E1cv12.." class="form-control" name="CreechlA5" id="CreEchlA5">
+        </div>
+        <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Call Back Number:</label>
+          <input type="tel" placeholder="888-888-88888" class="form-control" name="CrePhoneA5" id="CrePhoneA5">
+        </div>
+        
+         <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Representative:</label>
+          <input type="tel" placeholder="CSR default" class="form-control" name="CreRepA5" id="CreRepA5">
+        </div>
+        <div class="fb-select form-group field-select-1564028499192">
+          <label for="new-pre-select" class="fb-select-label">Select</label>
+          <select class="form-control" name="select" id="selectA5">
+            <option selected="true">Select an Option</option>
+            <option value="Applicant call" id="select1newpresA5">Applicant call in </option>
+            <option value="Creditor call" id="select2newpresA5">Creditor call in </option>
+            <option value="Mortgage Lender Call" id="select3newpresA5">Mortgage Lender Call in</option>
+          </select>
+        </div>
+        <div class="fb-text form-group field-text-1564028645911">
+          <label for="text-1564028645911" class="fb-text-label">
+          <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Confirm acct is borr or co-borr
+:</label>
+          <input type="tel" placeholder="Appl /  Co-app" class="form-control" name="new-pre-nameA5" id="CreNameA5">
+        </div>
+          
+          </label>
+          
+        </div>
+        <div class="fb-text form-group field-text-1564028992860">
+          <label for="text-1564028992860" class="fb-text-label">Loan type
+:</label>
+          <input type="text" placeholder="Regular Credit Card" class="form-control" name="LoanTypeA5" id="LoanTypeA5">
+        </div>
+        <div class="fb-number form-group field-number-1564029014934">
+          <label for="number-1564029014934" class="fb-number-label">Date Open:</label>
+          <input type="number" placeholder="MM/DD/YYYY" class="form-control" name="number-1564029014934A3" id="DateOpenA5">
+        </div>
+        <div class="fb-text form-group field-text-1564029089141">
+          <label for="text-1564029089141" class="fb-text-label">Credit Limit:</label>
+          <input type="text" placeholder="$$$" name="text-1564029089141" id="CreLimitA5">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">Balance:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CreBalA5">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">Payment Amount:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CrePayAmA5">
+        </div>
+           <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">LPM:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CreLpmA5">
+        </div>
+
+           <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">NPD:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CreNpdA5">
+        </div>
+
+
+        <div class="fb-textarea form-group field-textarea-1564029244644">
+          <label for="textarea-1564029244644" class="fb-textarea-label">Late Payments Over 30?</label>
+          <textarea type="textarea" class="form-control" name="textarea-1564029244644" id="CreLatePayA5"></textarea>
+        </div>
+      </div>
+    </form>
+                    <!-- *////////////////  TEXTFIELD    //////////////////-->
+
+
+
+                    </div>
+                    <!-- *////////////////  DIALOG    //////////////////-->
+
+                </div>
+
+                <!-- *////////////////  TAB3-1     //////////////////-->
+              
+              
+              
+              
+              
+
+                <!-- *////////////////  TAB3-2     //////////////////-->
+
+
+                <div id="tabs5-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                    <br> <br> <br>
+                    <button id="getdataB5">Regular Update</button>
+
+                    <div id="dialog-messageB5" title="Regular Update">
+
+                               <form id="rendered-formB5">
+      <div class="rendered-formB5">
+        <div class="fb-text form-group field-text-1564028225108">
+          <label for="text-1564028225108" class="fb-text-label">ECHL:</label>
+          <input type="text" placeholder="E1cv12.." class="form-control" name="regUpPrelEchlB4" id="regUpPrelEchlB5">
+        </div>
+        <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Call Back Number:</label>
+          <input type="tel" placeholder="888-888-88888" class="form-control" name="text-1564028435826" id="regUpPrelphoneB5">
+        </div>
+        <div class="fb-select form-group field-select-1564028499192">
+          <label for="select-1564028499192" class="fb-select-label">Select</label>
+          <select class="form-control" name="select-1564028499192" id="selectB5">
+            <option selected="true">Select Option</option>
+            <option value="Applicant call" id="appCall1B5">Applicant call</option>
+            <option value="Creditor call" id="creditCall1B5">Creditor call</option>
+            <option value="Mortgage Lender Call" id="mortgageCall1B5">Mortgage Lender Call</option>
+          </select>
+        </div>
+        <div class="fb-text form-group field-text-1564028645911">
+          <label for="text-1564028645911" class="fb-text-label">
+         <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Balance:</label>
+          <input type="tel" placeholder="Appl / Co-App" class="form-control" name="text-1564028435826" id="regBalB5">
+        </div>
+          </label>
+          
+        </div>
+        <div class="fb-text form-group field-text-1564028992860">
+          <label for="text-1564028992860" class="fb-text-label">Montly Payment Amount:</label>
+          <input type="text" placeholder="MM/DD/YYYY" class="form-control" name="text-1564028992860" id="regUpCrelPayB5">
+        </div>
+       
+        <div class="fb-text form-group field-text-1564029089141">
+          <label for="text-1564029089141" class="fb-text-label">LPM:</label>
+          <input type="text" class="form-control" name="text-1564029089141" id="regCreLpmB5">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">NPD:</label>
+          <input type="text" class="form-control" name="text-1564029192850" id="regCreNpdB5">
+        </div>
+        <div class="fb-textarea form-group field-textarea-1564029244644">
+          <label for="textarea-1564029244644" class="fb-textarea-label">Late Payments Over 30?</label>
+          <textarea type="textarea" class="form-control" name="textarea-1564029244644" id="regCreLatesB5"></textarea>
+        </div>
+      </div>
+    </form>
+                    </div>
+
+                    <br> <br> <br>
+
+                </div>
+                <!-- *////////////////  TAB3-2     //////////////////-->
+
+
+
+
+
+
+
+
+                <!-- *////////////////  TAB3     //////////////////-->
+
+            </div>
+
+        </div>
+<!-- /////////////////////////////////////////////////////    SHOWSEVEN   //////////////////////////////////////////////////////-->
+
+
+
+
+<!-- /////////////////////////////////////////////////////    SHOWEIGHT //////////////////////////////////////////////////////-->
+
+
+
+ <div id="showEight" class="myDiv2" style="display: none;">
+
+            <!-- *////////////////  SHOWONE     //////////////////-->
+
+
+            <!-- *////////////////  insurance     //////////////////-->
+            <h1>CREDIT CARD / Too new to rate</h1> <br><br>
+
+
+
+
+            <!-- *///////     /////     TABS3        /////////////-->
+            <script type="text/javascript">
+                $(function() {
+                    $("#tabs5").tabs({
+                        event: "mouseover"
+                    });
+                });
+            </script>
+
+
+
+            <div id="tabs5" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+
+                <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all ui-sortable" role="tablist">
+                    <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs1-1" aria-labelledby="ui-id-1" aria-selected="true"><a href="#tabs5-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">New Trade</a></li>
+                    <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs5-2" aria-labelledby="ui-id-2" aria-selected="false"><a href="#tabs5-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Regular Update</a></li>
+
+                </ul>
+
+                <!-- *///////////////  TAB3-1     //////////////////-->
+                <div id="tabs5-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false">
+
+                    <br> <br> <br> <button id="getdataA5">New trade</button><br> <br> <br>
+
+
+
+
+
+                    <!-- *////////////////  DIALOG    //////////////////-->
+
+                    <div id="dialog-messageA5" title="New Trade Added">
+                      
+                      
+                      
+<!-- *////////////////  TEXTFIELD    //////////////////-->
+
+  <form id="rendered-formA5">
+      <div class="rendered-formA5">
+        <div class="fb-text form-group field-text-1564028225108">
+          <label for="text-1564028225108" class="fb-text-label">echl:</label>
+          <input type="text" placeholder="E1cv12.." class="form-control" name="CreechlA5" id="CreEchlA5">
+        </div>
+        <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Call Back Number:</label>
+          <input type="tel" placeholder="888-888-88888" class="form-control" name="CrePhoneA5" id="CrePhoneA5">
+        </div>
+        
+         <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Representative:</label>
+          <input type="tel" placeholder="CSR default" class="form-control" name="CreRepA5" id="CreRepA5">
+        </div>
+        <div class="fb-select form-group field-select-1564028499192">
+          <label for="new-pre-select" class="fb-select-label">Select</label>
+          <select class="form-control" name="select" id="selectA5">
+            <option selected="true">Select an Option</option>
+            <option value="Applicant call" id="select1newpresA5">Applicant call in </option>
+            <option value="Creditor call" id="select2newpresA5">Creditor call in </option>
+            <option value="Mortgage Lender Call" id="select3newpresA5">Mortgage Lender Call in</option>
+          </select>
+        </div>
+        <div class="fb-text form-group field-text-1564028645911">
+          <label for="text-1564028645911" class="fb-text-label">
+          <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Confirm acct is borr or co-borr
+:</label>
+          <input type="tel" placeholder="Appl /  Co-app" class="form-control" name="new-pre-nameA5" id="CreNameA5">
+        </div>
+          
+          </label>
+          
+        </div>
+        <div class="fb-text form-group field-text-1564028992860">
+          <label for="text-1564028992860" class="fb-text-label">Loan type
+:</label>
+          <input type="text" placeholder="Regular Credit Card" class="form-control" name="LoanTypeA5" id="LoanTypeA5">
+        </div>
+        <div class="fb-number form-group field-number-1564029014934">
+          <label for="number-1564029014934" class="fb-number-label">Date Open:</label>
+          <input type="number" placeholder="MM/DD/YYYY" class="form-control" name="number-1564029014934A3" id="DateOpenA5">
+        </div>
+        <div class="fb-text form-group field-text-1564029089141">
+          <label for="text-1564029089141" class="fb-text-label">Credit Limit:</label>
+          <input type="text" placeholder="$$$" name="text-1564029089141" id="CreLimitA5">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">Balance:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CreBalA5">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">Payment Amount:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CrePayAmA5">
+        </div>
+           <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">LPM:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CreLpmA5">
+        </div>
+
+           <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">NPD:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CreNpdA5">
+        </div>
+
+
+        <div class="fb-textarea form-group field-textarea-1564029244644">
+          <label for="textarea-1564029244644" class="fb-textarea-label">Late Payments Over 30?</label>
+          <textarea type="textarea" class="form-control" name="textarea-1564029244644" id="CreLatePayA5"></textarea>
+        </div>
+      </div>
+    </form>
+                    <!-- *////////////////  TEXTFIELD    //////////////////-->
+
+
+
+                    </div>
+                    <!-- *////////////////  DIALOG    //////////////////-->
+
+                </div>
+
+                <!-- *////////////////  TAB3-1     //////////////////-->
+              
+              
+              
+              
+              
+
+                <!-- *////////////////  TAB3-2     //////////////////-->
+
+
+                <div id="tabs5-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                    <br> <br> <br>
+                    <button id="getdataB5">Regular Update</button>
+
+                    <div id="dialog-messageB5" title="Regular Update">
+
+                               <form id="rendered-formB5">
+      <div class="rendered-formB5">
+        <div class="fb-text form-group field-text-1564028225108">
+          <label for="text-1564028225108" class="fb-text-label">ECHL:</label>
+          <input type="text" placeholder="E1cv12.." class="form-control" name="regUpPrelEchlB4" id="regUpPrelEchlB5">
+        </div>
+        <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Call Back Number:</label>
+          <input type="tel" placeholder="888-888-88888" class="form-control" name="text-1564028435826" id="regUpPrelphoneB5">
+        </div>
+        <div class="fb-select form-group field-select-1564028499192">
+          <label for="select-1564028499192" class="fb-select-label">Select</label>
+          <select class="form-control" name="select-1564028499192" id="selectB5">
+            <option selected="true">Select Option</option>
+            <option value="Applicant call" id="appCall1B5">Applicant call</option>
+            <option value="Creditor call" id="creditCall1B5">Creditor call</option>
+            <option value="Mortgage Lender Call" id="mortgageCall1B5">Mortgage Lender Call</option>
+          </select>
+        </div>
+        <div class="fb-text form-group field-text-1564028645911">
+          <label for="text-1564028645911" class="fb-text-label">
+         <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Balance:</label>
+          <input type="tel" placeholder="Appl / Co-App" class="form-control" name="text-1564028435826" id="regBalB5">
+        </div>
+          </label>
+          
+        </div>
+        <div class="fb-text form-group field-text-1564028992860">
+          <label for="text-1564028992860" class="fb-text-label">Montly Payment Amount:</label>
+          <input type="text" placeholder="MM/DD/YYYY" class="form-control" name="text-1564028992860" id="regUpCrelPayB5">
+        </div>
+       
+        <div class="fb-text form-group field-text-1564029089141">
+          <label for="text-1564029089141" class="fb-text-label">LPM:</label>
+          <input type="text" class="form-control" name="text-1564029089141" id="regCreLpmB5">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">NPD:</label>
+          <input type="text" class="form-control" name="text-1564029192850" id="regCreNpdB5">
+        </div>
+        <div class="fb-textarea form-group field-textarea-1564029244644">
+          <label for="textarea-1564029244644" class="fb-textarea-label">Late Payments Over 30?</label>
+          <textarea type="textarea" class="form-control" name="textarea-1564029244644" id="regCreLatesB5"></textarea>
+        </div>
+      </div>
+    </form>
+                    </div>
+
+                    <br> <br> <br>
+
+                </div>
+                <!-- *////////////////  TAB3-2     //////////////////-->
+
+
+
+
+
+
+
+
+                <!-- *////////////////  TAB3     //////////////////-->
+
+            </div>
+
+        </div>
+<!-- /////////////////////////////////////////////////////    SHOWEIGHT   //////////////////////////////////////////////////////-->
+
+
+<!-- /////////////////////////////////////////////////////    SHOWNINE //////////////////////////////////////////////////////-->
+
+
+
+ <div id="showNine" class="myDiv2" style="display: none;">
+
+            <!-- *////////////////  SHOWNINE     //////////////////-->
+
+
+            <!-- *////////////////  insurance     //////////////////-->
+            <h1>Auto Loan</h1> <br><br>
+
+
+
+
+            <!-- *///////     /////     TABS3        /////////////-->
+            <script type="text/javascript">
+                $(function() {
+                    $("#tabs5").tabs({
+                        event: "mouseover"
+                    });
+                });
+            </script>
+
+
+
+            <div id="tabs5" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+
+                <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all ui-sortable" role="tablist">
+                    <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs1-1" aria-labelledby="ui-id-1" aria-selected="true"><a href="#tabs5-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">New Trade</a></li>
+                    <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs5-2" aria-labelledby="ui-id-2" aria-selected="false"><a href="#tabs5-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Regular Update</a></li>
+
+                </ul>
+
+                <!-- *///////////////  TAB3-1     //////////////////-->
+                <div id="tabs5-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false">
+
+                    <br> <br> <br> <button id="getdataA5">New trade</button><br> <br> <br>
+
+
+
+
+
+                    <!-- *////////////////  DIALOG    //////////////////-->
+
+                    <div id="dialog-messageA5" title="New Trade Added">
+                      
+                      
+                      
+<!-- *////////////////  TEXTFIELD    //////////////////-->
+
+  <form id="rendered-formA5">
+      <div class="rendered-formA5">
+        <div class="fb-text form-group field-text-1564028225108">
+          <label for="text-1564028225108" class="fb-text-label">echl:</label>
+          <input type="text" placeholder="E1cv12.." class="form-control" name="CreechlA5" id="CreEchlA5">
+        </div>
+        <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Call Back Number:</label>
+          <input type="tel" placeholder="888-888-88888" class="form-control" name="CrePhoneA5" id="CrePhoneA5">
+        </div>
+        
+         <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Representative:</label>
+          <input type="tel" placeholder="CSR default" class="form-control" name="CreRepA5" id="CreRepA5">
+        </div>
+        <div class="fb-select form-group field-select-1564028499192">
+          <label for="new-pre-select" class="fb-select-label">Select</label>
+          <select class="form-control" name="select" id="selectA5">
+            <option selected="true">Select an Option</option>
+            <option value="Applicant call" id="select1newpresA5">Applicant call in </option>
+            <option value="Creditor call" id="select2newpresA5">Creditor call in </option>
+            <option value="Mortgage Lender Call" id="select3newpresA5">Mortgage Lender Call in</option>
+          </select>
+        </div>
+        <div class="fb-text form-group field-text-1564028645911">
+          <label for="text-1564028645911" class="fb-text-label">
+          <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Confirm acct is borr or co-borr
+:</label>
+          <input type="tel" placeholder="Appl /  Co-app" class="form-control" name="new-pre-nameA5" id="CreNameA5">
+        </div>
+          
+          </label>
+          
+        </div>
+        <div class="fb-text form-group field-text-1564028992860">
+          <label for="text-1564028992860" class="fb-text-label">Loan type
+:</label>
+          <input type="text" placeholder="Regular Credit Card" class="form-control" name="LoanTypeA5" id="LoanTypeA5">
+        </div>
+        <div class="fb-number form-group field-number-1564029014934">
+          <label for="number-1564029014934" class="fb-number-label">Date Open:</label>
+          <input type="number" placeholder="MM/DD/YYYY" class="form-control" name="number-1564029014934A3" id="DateOpenA5">
+        </div>
+        <div class="fb-text form-group field-text-1564029089141">
+          <label for="text-1564029089141" class="fb-text-label">Credit Limit:</label>
+          <input type="text" placeholder="$$$" name="text-1564029089141" id="CreLimitA5">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">Balance:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CreBalA5">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">Payment Amount:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CrePayAmA5">
+        </div>
+           <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">LPM:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CreLpmA5">
+        </div>
+
+           <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">NPD:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CreNpdA5">
+        </div>
+
+
+        <div class="fb-textarea form-group field-textarea-1564029244644">
+          <label for="textarea-1564029244644" class="fb-textarea-label">Late Payments Over 30?</label>
+          <textarea type="textarea" class="form-control" name="textarea-1564029244644" id="CreLatePayA5"></textarea>
+        </div>
+      </div>
+    </form>
+                    <!-- *////////////////  TEXTFIELD    //////////////////-->
+
+
+
+                    </div>
+                    <!-- *////////////////  DIALOG    //////////////////-->
+
+                </div>
+
+                <!-- *////////////////  TAB3-1     //////////////////-->
+              
+              
+              
+              
+              
+
+                <!-- *////////////////  TAB3-2     //////////////////-->
+
+
+                <div id="tabs5-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                    <br> <br> <br>
+                    <button id="getdataB5">Regular Update</button>
+
+                    <div id="dialog-messageB5" title="Regular Update">
+
+                               <form id="rendered-formB5">
+      <div class="rendered-formB5">
+        <div class="fb-text form-group field-text-1564028225108">
+          <label for="text-1564028225108" class="fb-text-label">ECHL:</label>
+          <input type="text" placeholder="E1cv12.." class="form-control" name="regUpPrelEchlB4" id="regUpPrelEchlB5">
+        </div>
+        <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Call Back Number:</label>
+          <input type="tel" placeholder="888-888-88888" class="form-control" name="text-1564028435826" id="regUpPrelphoneB5">
+        </div>
+        <div class="fb-select form-group field-select-1564028499192">
+          <label for="select-1564028499192" class="fb-select-label">Select</label>
+          <select class="form-control" name="select-1564028499192" id="selectB5">
+            <option selected="true">Select Option</option>
+            <option value="Applicant call" id="appCall1B5">Applicant call</option>
+            <option value="Creditor call" id="creditCall1B5">Creditor call</option>
+            <option value="Mortgage Lender Call" id="mortgageCall1B5">Mortgage Lender Call</option>
+          </select>
+        </div>
+        <div class="fb-text form-group field-text-1564028645911">
+          <label for="text-1564028645911" class="fb-text-label">
+         <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Balance:</label>
+          <input type="tel" placeholder="Appl / Co-App" class="form-control" name="text-1564028435826" id="regBalB5">
+        </div>
+          </label>
+          
+        </div>
+        <div class="fb-text form-group field-text-1564028992860">
+          <label for="text-1564028992860" class="fb-text-label">Montly Payment Amount:</label>
+          <input type="text" placeholder="MM/DD/YYYY" class="form-control" name="text-1564028992860" id="regUpCrelPayB5">
+        </div>
+       
+        <div class="fb-text form-group field-text-1564029089141">
+          <label for="text-1564029089141" class="fb-text-label">LPM:</label>
+          <input type="text" class="form-control" name="text-1564029089141" id="regCreLpmB5">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">NPD:</label>
+          <input type="text" class="form-control" name="text-1564029192850" id="regCreNpdB5">
+        </div>
+        <div class="fb-textarea form-group field-textarea-1564029244644">
+          <label for="textarea-1564029244644" class="fb-textarea-label">Late Payments Over 30?</label>
+          <textarea type="textarea" class="form-control" name="textarea-1564029244644" id="regCreLatesB5"></textarea>
+        </div>
+      </div>
+    </form>
+                    </div>
+
+                    <br> <br> <br>
+
+                </div>
+                <!-- *////////////////  TAB3-2     //////////////////-->
+
+
+
+
+
+
+
+
+                <!-- *////////////////  TAB3     //////////////////-->
+
+            </div>
+
+        </div>
+<!-- /////////////////////////////////////////////////////    SHOWNINE   //////////////////////////////////////////////////////-->
+
+
+
+<!-- /////////////////////////////////////////////////////    SHOWTEN //////////////////////////////////////////////////////-->
+
+
+
+ <div id="showTen" class="myDiv2" style="display: none;">
+
+            <!-- *////////////////  SHOWNINE     //////////////////-->
+
+
+            <!-- *////////////////  insurance     //////////////////-->
+            <h1>Auto Loan</h1> <br><br>
+
+
+
+
+            <!-- *///////     /////     TABS3        /////////////-->
+            <script type="text/javascript">
+                $(function() {
+                    $("#tabs5").tabs({
+                        event: "mouseover"
+                    });
+                });
+            </script>
+
+
+
+            <div id="tabs5" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+
+                <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all ui-sortable" role="tablist">
+                    <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs1-1" aria-labelledby="ui-id-1" aria-selected="true"><a href="#tabs5-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">New Trade</a></li>
+                    <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs5-2" aria-labelledby="ui-id-2" aria-selected="false"><a href="#tabs5-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Regular Update</a></li>
+
+                </ul>
+
+                <!-- *///////////////  TAB3-1     //////////////////-->
+                <div id="tabs5-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false">
+
+                    <br> <br> <br> <button id="getdataA5">New trade</button><br> <br> <br>
+
+
+
+
+
+                    <!-- *////////////////  DIALOG    //////////////////-->
+
+                    <div id="dialog-messageA5" title="New Trade Added">
+                      
+                      
+                      
+<!-- *////////////////  TEXTFIELD    //////////////////-->
+
+  <form id="rendered-formA5">
+      <div class="rendered-formA5">
+        <div class="fb-text form-group field-text-1564028225108">
+          <label for="text-1564028225108" class="fb-text-label">echl:</label>
+          <input type="text" placeholder="E1cv12.." class="form-control" name="CreechlA5" id="CreEchlA5">
+        </div>
+        <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Call Back Number:</label>
+          <input type="tel" placeholder="888-888-88888" class="form-control" name="CrePhoneA5" id="CrePhoneA5">
+        </div>
+        
+         <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Representative:</label>
+          <input type="tel" placeholder="CSR default" class="form-control" name="CreRepA5" id="CreRepA5">
+        </div>
+        <div class="fb-select form-group field-select-1564028499192">
+          <label for="new-pre-select" class="fb-select-label">Select</label>
+          <select class="form-control" name="select" id="selectA5">
+            <option selected="true">Select an Option</option>
+            <option value="Applicant call" id="select1newpresA5">Applicant call in </option>
+            <option value="Creditor call" id="select2newpresA5">Creditor call in </option>
+            <option value="Mortgage Lender Call" id="select3newpresA5">Mortgage Lender Call in</option>
+          </select>
+        </div>
+        <div class="fb-text form-group field-text-1564028645911">
+          <label for="text-1564028645911" class="fb-text-label">
+          <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Confirm acct is borr or co-borr
+:</label>
+          <input type="tel" placeholder="Appl /  Co-app" class="form-control" name="new-pre-nameA5" id="CreNameA5">
+        </div>
+          
+          </label>
+          
+        </div>
+        <div class="fb-text form-group field-text-1564028992860">
+          <label for="text-1564028992860" class="fb-text-label">Loan type
+:</label>
+          <input type="text" placeholder="Regular Credit Card" class="form-control" name="LoanTypeA5" id="LoanTypeA5">
+        </div>
+        <div class="fb-number form-group field-number-1564029014934">
+          <label for="number-1564029014934" class="fb-number-label">Date Open:</label>
+          <input type="number" placeholder="MM/DD/YYYY" class="form-control" name="number-1564029014934A3" id="DateOpenA5">
+        </div>
+        <div class="fb-text form-group field-text-1564029089141">
+          <label for="text-1564029089141" class="fb-text-label">Credit Limit:</label>
+          <input type="text" placeholder="$$$" name="text-1564029089141" id="CreLimitA5">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">Balance:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CreBalA5">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">Payment Amount:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CrePayAmA5">
+        </div>
+           <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">LPM:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CreLpmA5">
+        </div>
+
+           <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">NPD:</label>
+          <input type="text" placeholder="$$$" class="form-control" name="text-1564029192850" id="CreNpdA5">
+        </div>
+
+
+        <div class="fb-textarea form-group field-textarea-1564029244644">
+          <label for="textarea-1564029244644" class="fb-textarea-label">Late Payments Over 30?</label>
+          <textarea type="textarea" class="form-control" name="textarea-1564029244644" id="CreLatePayA5"></textarea>
+        </div>
+      </div>
+    </form>
+                    <!-- *////////////////  TEXTFIELD    //////////////////-->
+
+
+
+                    </div>
+                    <!-- *////////////////  DIALOG    //////////////////-->
+
+                </div>
+
+                <!-- *////////////////  TAB3-1     //////////////////-->
+              
+              
+              
+              
+              
+
+                <!-- *////////////////  TAB3-2     //////////////////-->
+
+
+                <div id="tabs5-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                    <br> <br> <br>
+                    <button id="getdataB5">Regular Update</button>
+
+                    <div id="dialog-messageB5" title="Regular Update">
+
+                               <form id="rendered-formB5">
+      <div class="rendered-formB5">
+        <div class="fb-text form-group field-text-1564028225108">
+          <label for="text-1564028225108" class="fb-text-label">ECHL:</label>
+          <input type="text" placeholder="E1cv12.." class="form-control" name="regUpPrelEchlB4" id="regUpPrelEchlB5">
+        </div>
+        <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Call Back Number:</label>
+          <input type="tel" placeholder="888-888-88888" class="form-control" name="text-1564028435826" id="regUpPrelphoneB5">
+        </div>
+        <div class="fb-select form-group field-select-1564028499192">
+          <label for="select-1564028499192" class="fb-select-label">Select</label>
+          <select class="form-control" name="select-1564028499192" id="selectB5">
+            <option selected="true">Select Option</option>
+            <option value="Applicant call" id="appCall1B5">Applicant call</option>
+            <option value="Creditor call" id="creditCall1B5">Creditor call</option>
+            <option value="Mortgage Lender Call" id="mortgageCall1B5">Mortgage Lender Call</option>
+          </select>
+        </div>
+        <div class="fb-text form-group field-text-1564028645911">
+          <label for="text-1564028645911" class="fb-text-label">
+         <div class="fb-text form-group field-text-1564028435826">
+          <label for="text-1564028435826" class="fb-text-label">Balance:</label>
+          <input type="tel" placeholder="Appl / Co-App" class="form-control" name="text-1564028435826" id="regBalB5">
+        </div>
+          </label>
+          
+        </div>
+        <div class="fb-text form-group field-text-1564028992860">
+          <label for="text-1564028992860" class="fb-text-label">Montly Payment Amount:</label>
+          <input type="text" placeholder="MM/DD/YYYY" class="form-control" name="text-1564028992860" id="regUpCrelPayB5">
+        </div>
+       
+        <div class="fb-text form-group field-text-1564029089141">
+          <label for="text-1564029089141" class="fb-text-label">LPM:</label>
+          <input type="text" class="form-control" name="text-1564029089141" id="regCreLpmB5">
+        </div>
+        <div class="fb-text form-group field-text-1564029192850">
+          <label for="text-1564029192850" class="fb-text-label">NPD:</label>
+          <input type="text" class="form-control" name="text-1564029192850" id="regCreNpdB5">
+        </div>
+        <div class="fb-textarea form-group field-textarea-1564029244644">
+          <label for="textarea-1564029244644" class="fb-textarea-label">Late Payments Over 30?</label>
+          <textarea type="textarea" class="form-control" name="textarea-1564029244644" id="regCreLatesB5"></textarea>
+        </div>
+      </div>
+    </form>
+                    </div>
+
+                    <br> <br> <br>
+
+                </div>
+                <!-- *////////////////  TAB3-2     //////////////////-->
+
+
+
+
+
+
+
+
+                <!-- *////////////////  TAB3     //////////////////-->
+
+            </div>
+
+        </div>
+<!-- /////////////////////////////////////////////////////    SHOWTEN  //////////////////////////////////////////////////////-->
+
+        <hr>
+        <br><br><br>
+
+ <h1>NOTES KEEPER</h1>
+      
+      
+         <hr>
+ <div class="ContentNotes">
+  
+  
+  <div class="fields">
+    
+   
+    <label>TRADE COUNT:</label>
+    <input type="text" id="id" disabled="">
+    <label>ECHL/ORDER:</label>
+    <input type="text" id="codigo">
+    <label>SUBJECT:</label>
+    <input type="text" id="nombre">
+    <label>BODY</label>
+    <textarea name="text" cols="25" rows="5" id="nota"></textarea>
+    <br>
+    <h2 class="alert1" style="display:none;">Copied ✅</h2>
+    <button id="boton1">Save</button>
+    <button id="boton2">Reset</button>
+    <button onclick="CopyText()">Copy text</button>
+    <button id="boton6">Refresh </button>
+    </div>
+     
+  </div>
+  
+  <br> <br>
+  
+  <h1>Notes List</h1>
+  
+  <hr>
+
+    <div id="content">
+
+		
+	  <p id="p1"></p>
+	  
+	</div>
+
+
+    </div>
+
+
+
+    <!-- *///////////////////////////////////////////////////   TABS 1    ///////////////////////////////////////////////////////////-->
+
+    <div id="tabs-2" aria-labelledby="ui-id-4" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false" style="display: block;">
+        <script type="text/javascript">
+
+						function openCalculator(){
+						
+						 window.open("Calculator.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=500,width=500,height=800");	}
+
+					</script>
+  
+  <h1>Calculator</h1><hr>
+    <br>
+  <button onclick="openCalculator()">Open Calculator</button> <br> <br><br>
+
+
+  
+  
+  <br>   <hr>
+   
+  <br><br>
+  <h1>Calendar</h1><br><br>
+     <hr> <br>
+     
+
+
+ 
+
+ <br><br><br>
+
+
+
+
+    </div>
+    <div id="tabs-3" aria-labelledby="ui-id-5" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+       <style type="text/css">[style*="--aspect-ratio"] > :first-child {
+  width: 100%;
+}
+[style*="--aspect-ratio"] > img {  
+  height: auto;
+} 
+
+.tracker{
+  
+  overflow: hidden;
+ 
+}
+
+
+.tracker1{
+  
+  overflow: hidden;
+ padding-top: 10%;
+  
+  
+}</style><div style="--aspect-ratio: 16/9;">
+  <iframe class="tracker" src="https://syqaptracker01.eis.equifax.com/" width="1600" height="600" frameborder="2">
+  </iframe>
+  
+  
+   
+</div>
+      
+
+    </div>
+</div></div><script>  $(function() {
+      $("#tabs").tabs({
+          event: "mouseover"
+      });
+  });
+
+
+  $(document).ready(function() {
+
+
+      $('#select').on('change', function() {
+
+
+
+
+      });
+
+      $('#myselection').on('change', function() {
+
+
+          var demovalue = $(this).val();
+          $("div.myDiv").hide();
+
+          $("#show" + demovalue).val();
+          $("#show" + demovalue).show();
+
+
+      });
+
+      $("#calculator").click(function openCalculator() {
+          window.open("Calculator.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=200,left=300,width=500,height=800");
+      });
+
+
+
+      $('#selectVerb').on('change', function() {
+
+          var selvalue = $(this).val();
+
+
+          $("div.myDiv2").hide();
+
+          var text = $("#show" + selvalue).text();
+
+          $("#show" + selvalue).show();
+
+
+         
+
+
+      });
+
+
+
+
+
+
+
+
+
+
+/** 
+
+function verifySelection(selvalue){
+
+  switch(selvalue){
+
+    
+                case "one":
+
+                
+
+
+                break;
+
+                 case "two":
+
+                break;
+
+                 case "Three":
+
+                break;
+
+                 case "Four":
+
+                break;
+
+                 case "Five":
+
+                break;
+
+                 case "Six":
+
+                break;
+
+                 case "Seven":
+
+                break;
+
+                 case "Eight":
+
+                break;
+
+                 case "Nine":
+
+                break;
+
+                 case "Ten":
+
+                break;
+
+                 case "Eleven":
+
+                break;
+
+                 case "Twelve":
+
+                break;
+
+                 case "Thirdteen":
+
+                break;
+
+                 case "Fourteen":
+
+                break;
+
+                 case "Fifteen":
+
+                break;
+
+                 case "Sixteen":
+
+                break;
+
+                 case "Seventeen":
+
+                break;
+
+                 case "Eighteen":
+
+                break;
+
+                 case "Nineteen":
+
+                break;
+
+                 case "Twenty":
+
+                break;
+
+                 case "Twentyone":
+
+                break;
+
+                 case "Twentytwo":
+
+                break;
+
+                case "Twentythree":
+
+                break;
+
+
+                case "Twentyfour":
+
+                break;
+
+                  case "Twentyfive":
+
+                break;
+
+                  case "Twentysix":
+
+                break;
+
+                  case "Twentyseven":
+
+                break;
+                  case "Twentyeight":
+
+                break;
+
+                  case "Twentynine":
+
+                break;
+                  default:
+
+                break;
+
+
+          }
+}
+
+             <option value="one">Present Landlord</option>
+            <option value="two">Previous Landlord</option>
+            <option value="Three">Utility</option>
+            <option value="Four">Insurance</option>
+            <option value="Five">Credit Card</option>
+            <option value="Six">Credit Card / 0 Bal</option>
+            <option value="Seven">Credit Card / Too new to rate</option>
+            <option value="Eight">Auto Loan</option>
+            <option value="Nine">Auto Lease</option>
+            <option value="Ten">Mortgage</option>
+            <option value="Eleven">Home Equity Loan</option>
+            <option value="Twelve">HELOC </option>
+            <option value="Thirdteen">Paid and Close</option>
+            <option value="Fourteen">Transfer (Current accounts)</option>
+            <option value="Fifteen">Unpaid Collection</option>
+            <option value="Sixteen">Unpaid Charge Off</option>
+            <option value="Seventeen">Paid Collection</option>
+            <option value="Eighteen">Paid Charge Off</option>
+            <option value="Nineteen">Student Loans (DEF / FORB / GRACE PER)</option>
+            <option value="Twenty">Student Loans (REPAYMENT)</option>
+            <option value="Twentyone">Student Loans (IBR)</option>
+            <option value="Twentytwo">Student Loans (COMBINE PAYMENT)</option>
+            <option value="Twentythree">Student Loans(CONSOLIDATED)</option>
+            <option value="Twentyfour">Ownership</option>
+            <option value="Twentyfive">BK7 - Unssecured Accounts</option>
+            <option value="Twentysix">BK7 - secured Accounts</option>
+            <option value="Twentyseven">BK13 - Unssecured Accounts</option>
+            <option value="Twentyeight">BK13 - secured Accounts (Creditor W/ Property)</option>
+            <option value="Twentynine">BK13 - secured Accounts (App W/ Property)</option>
+
+
+            **/
+
+
+
+      function createNote(textA) {
+
+
+
+          $("#nota").text(textA.trim());
+
+      }
+
+
+      // -------------- RADIOS  1 -------------------------------------------------------------
+      /**
+
+      	$('input[type=radio][name=trade]').on('change', function() {
+      	  
+      	var res; 
+
+      	  switch ($(this).val()) {
+      	    case 'yes':
+      	    var textA="";
+      	    
+      	       $(".res2").css("display", "none");
+      	    	$(".res1").css("display", "block");
+
+      	    	//var textA= $(".res1").text();
+      	    	//createNote(textA);
+      	      
+      	     
+      	      break;
+      	    case 'no':
+      	   
+      	     
+      	       $(".res1").css("display", "none");
+      	      $(".res2").css("display", "block");
+
+
+      	    	//var textA= $(".res2").text();
+      	    	//createNote(textA);
+      	      break;
+      	  }
+
+
+      	});**/
+
+      $('#select option:selected').on('change', function() {
+
+
+
+          var texto1 = $('#select option:selected').text();
+
+
+
+          $("").val(texto1);
+
+      });
+
+
+      // -------------- RADIOS  2 -------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+      // ************************************************************************************************************************************************   MIRROR CODE ******************************************************************************************************************************************************************************************************************************************************************************************************************
+
+
+      $.fn.mirror = function(selector) {
+          return this.each(function() {
+              var $this = $(this);
+              var $selector = $(selector);
+              $this.bind('keyup', function() {
+                  $selector.val(($this.val()));
+              });
+          });
+      };
+
+
+function VerifySelection(){
+
+
+
+}
+
+
+
+
+      // ************************************************************************************************************************************************   MIRROR ACTIONS ******************************************************************************************************************************************************************************************************************************************************************************************************************
+
+
+
+
+
+
+      $('#NewPreEchl').mirror('#codigo');
+
+      $('#select').mirror('#nombre');
+
+
+
+
+      // ************************************************************************************************************************************************   CALENDAR ********************************************************************************************************************
+
+
+
+      // ************************************************************************************************************************************************   CALENDAR ********************************************************************************************************************
+
+      // ************************************************************************************************************************************************   PHONE ********************************************************************************************************************
+
+
+
+
+
+      $('#NewPrePhone').keydown(function(e) {
+          var key = e.charCode || e.keyCode || 0;
+          $text = $(this);
+          if (key !== 8 && key !== 9) {
+              if ($text.val().length === 3) {
+                  $text.val($text.val() + '-');
+              }
+              if ($text.val().length === 7) {
+                  $text.val($text.val() + '-');
+              }
+
+          }
+
+          return (key == 8 || key == 9 || key == 46 || (key >= 48 && key <= 57) || (key >= 96 && key <= 105));
+      })
+
+
+
+      // ************************************************************************************************************************************************   resetTrades *******************************************************************************************************************
+
+
+  function resetTrades() {
+
+
+          $("input").val("");
+          $("#selectA1 option:selected").val("");
+          $("#selectB1 option:selected").val("");
+           $("#selectA2 option:selected").val("");
+           $("#selectB2 option:selected").val("");
+           $("#selectA3 option:selected").val("");
+           $("#selectB3 option:selected").val("");
+           $("#selectA3 option:selected").val("");
+           $("#selectA4 option:selected").val("");
+           $("#selectB4 option:selected").val("");
+           $("#selectA5 option:selected").val("");
+           $("#selectB5 option:selected").val("");
+      }
+
+
+function verifyData(){
+
+
+
+ if($('input:text').is(":empty")) {
+
+    return alert("There are empty fields");
+
+   
+} else {
+
+    return true;
+}
+
+}
+
+
+      // ************************************************************************************************************************************************   PHONE ********************************************************************************************************************
+
+
+
+      $("#getdataA1").click(function() {
+
+          $("#target option:first").attr('selected', 'selected');
+
+          $("#rendered-formA1").css("display", "block");
+
+
+
+
+
+
+          $("#dialog-messageA1").dialog({
+              modal: true,
+              autoopen: false,
+              buttons: {
+                  Cancel: function() {
+                      $(this).dialog("close");
+                  },
+                  Submit: function() {
+                      var value = 1;
+
+                      var rep = "CSR";
+                      var echl = $("#NewPreEchlA1").val();
+
+                      var phone = $("#NewPrePhoneA1").val();
+                      var select = $("#selectA1 option:selected").val();
+                      var rep = $("#NewPreRepA1").val();
+                      var name = $("#new-pre-nameA1").val();
+                      var movein = $("#NewPreMoveA1").val();
+                      var payment = $("#NewPrePayAmA1").val();
+                      var lpm = $("#NewPreLpmA1").val();
+                      var npd = $("#NewPreNpdA1").val();
+                      var lates = $("#NewPreLatesNotesA1").val();
+
+                      verifyData();
+
+                      var nota1;
+
+                      //nota1= select+ " "+phone+" "+ "PER "+rep+ " obtained: "+ "\n"+ "Move in date: " + movein+"\n"+"Payment Amount:" +payment+"\n"+ " LPM:" +lpm +"\n"+"NPD:"+npd+ "\n"+ "Lates over 30 days:"+lates;
+
+
+                      nota1 = select;
+                      nota1 += " " + phone;
+                      nota1 += " / " + "per " + rep + " obtained:";
+                      nota1 += "\n";
+                      nota1 += "Name on Rental Agreement: " + name;
+                      nota1 += "\n";
+                      nota1 += "Move in Date: " + movein;
+                      nota1 += "\n";
+                      nota1 += "Payment Amount: " + payment;
+                      nota1 += "\n";
+                      nota1 += "LPM: " + lpm;
+                      nota1 += "\n";
+                      nota1 += "NPD: " + npd;
+                      nota1 += "\n";
+                      nota1 += "Lates over 30 Days: " + lates;
+
+
+
+  
+                      $("#nota").html(nota1);
+                      CopyText();
+                                
+
+
+                      $(this).dialog("close");
+
+                      ConfirmDialog('Save note?');
+
+                      function ConfirmDialog(message) {
+                          $('<div></div>').appendTo('body')
+                              .html('<div><h6>' + message + '?</h6></div>')
+                              .dialog({
+                                  modal: true,
+                                  title: 'Delete message',
+                                  zIndex: 10000,
+                                  autoOpen: true,
+                                  width: 'auto',
+                                  resizable: false,
+                                  buttons: {
+                                      Yes: function() {
+                                          // $(obj).removeAttr('onclick');                                
+                                          // $(obj).parents('.Parent').remove();
+                                          resetTrades();
+
+                                          $("#boton1").trigger("click");
+                                          $("#boton6").trigger("click");
+
+                                          $(this).dialog("close");
+                                      },
+                                      No: function() {
+
+
+                                          $(this).dialog("close");
+                                      }
+                                  },
+                                  close: function(event, ui) {
+                                      $(this).remove();
+                                  }
+                              });
+                      };
+
+
+
+
+                  }
+              }
+          });
+
+      });
+
+
+
+      $("#getdataB1").click(function() {
+
+
+
+
+          $("#target option:first").attr('selected', 'selected');
+
+          $("#rendered-formB1").css("display", "block")
+
+          $("#dialog-messageB1").dialog({
+              modal: true,
+              autoopen: false,
+              buttons: {
+                  Cancel: function() {
+                      $(this).dialog("close");
+                  },
+                  Submit: function() {
+                      var value = 1;
+
+                      var rep = "CSR";
+                      var echl = $("#regUpPrelEchlB1").val();
+
+                      var phone = $("#regUpPrelphoneB1").val();
+                      var select = $("#selectB1 option:selected").val();
+                      var rep = $("#regUpPrelRepB1").val();
+
+                      var movein = $("#regUpPrelMoveB1").val();
+                      var payment = $("#regUpPrelPayB1").val();
+                      var lpm = $("#regUpLpmB1").val();
+                      var npd = $("#regUpNpdB1").val();
+                      var lates = $("#regUpLatesB1").val();
+
+                      verifyData();  
+
+
+                      var nota1;
+
+                      //nota1= select+ " "+phone+" "+ "PER "+rep+ " obtained: "+ "\n"+ "Move in date: " + movein+"\n"+"Payment Amount:" +payment+"\n"+ " LPM:" +lpm +"\n"+"NPD:"+npd+ "\n"+ "Lates over 30 days:"+lates;
+
+
+                      nota1 = select;
+                      nota1 += " " + phone;
+                      nota1 += " / " + "per " + rep + " obtained:";
+                      nota1 += "\n";
+                      nota1 += "Name on Rental Agreement: " + name;
+                      nota1 += "\n";
+                      nota1 += "Move in Date: " + movein;
+                      nota1 += "\n";
+                      nota1 += "Payment Amount: " + payment;
+                      nota1 += "\n";
+                      nota1 += "LPM: " + lpm;
+                      nota1 += "\n";
+                      nota1 += "NPD: " + npd;
+                      nota1 += "\n";
+                      nota1 += "Lates over 30 Days: " + lates;
+
+
+
+
+
+
+                      $("#nota").html(nota1);
+                      resetTrades();
+
+
+
+                      $(this).dialog("close");
+
+                      ConfirmDialog('Save note?');
+
+                      function ConfirmDialog(message) {
+                          $('<div></div>').appendTo('body')
+                              .html('<div><h6>' + message + '?</h6></div>')
+                              .dialog({
+                                  modal: true,
+                                  title: 'Delete message',
+                                  zIndex: 10000,
+                                  autoOpen: true,
+                                  width: 'auto',
+                                  resizable: false,
+                                  buttons: {
+                                      Yes: function() {
+                                          // $(obj).removeAttr('onclick');                                
+                                          // $(obj).parents('.Parent').remove();
+
+                                          $("#boton1").trigger("click");
+                                          $("#boton6").trigger("click");
+
+                                          $(this).dialog("close");
+                                      },
+                                      No: function() {
+
+
+                                          $(this).dialog("close");
+                                      }
+                                  },
+                                  close: function(event, ui) {
+                                      $(this).remove();
+                                  }
+                              });
+                      };
+
+
+
+
+                  }
+              }
+          });
+
+      });
+
+
+    
+
+
+      $("#getdataA5").click(function() {
+
+          $("#target option:first").attr('selected', 'selected');
+
+          $("#rendered-formA5").css("display", "block")
+
+          $("#dialog-messageA5").dialog({
+              modal: true,
+              autoopen: false,
+              buttons: {
+                  Cancel: function() {
+                      $(this).dialog("close");
+                  },
+                  Submit: function() {
+                      var value = 1;
+
+                      var rep = "CSR";
+                      var echl = $("#NewCreEchl").val();
+
+                      var phone = $("#NewCrePhone").val();
+                      var select = $("#selectA5 option:selected").val();
+                      var rep = $("#NewCreRep").val();
+                      var name = $("#NewCreName").val();
+                      var loan = $("#NewCreLoan").val();
+                      var NewCreDate = $("#NewCreDate").val();
+                      var creLimit = $("#NewCreLimit").val();
+                      var NewCreBal = $("#NewCreBal").val();
+                      var creLpm = $("#NewCreLpm").val();
+                      var creNpd = $("#NewCreNpd").val();
+                      var NewCreLatesNotes = $("#NewCreLatesNotes").val();
+
+                    verifyData();
+
+                      var nota1;
+
+                      //nota1= select+ " "+phone+" "+ "PER "+rep+ " obtained: "+ "\n"+ "Move in date: " + movein+"\n"+"Payment Amount:" +payment+"\n"+ " LPM:" +lpm +"\n"+"NPD:"+npd+ "\n"+ "Lates over 30 days:"+lates;
+
+
+                      nota1 = select;
+                      nota1 += " " + phone;
+                      nota1 += " / " + "per " + rep + " obtained:";
+                      nota1 += "\n";
+                      nota1 += "Confirm acct is borr or co-borr: " + name;
+                      nota1 += "\n";
+                      nota1 += "Card/loan type: " + loan;
+                      nota1 += "\n";
+                      nota1 += "Date Open: " + NewCreDate;
+                      nota1 += "\n";
+                      nota1 += "Credit Limit: " + creLimit;
+                      nota1 += "\n";
+                      nota1 += "Balance: " + NewCreBal;
+                      nota1 += "\n";
+                      nota1 += "LPM: " + creLpm;
+                      nota1 += "NPD: " + creNpd;
+                      nota1 += "Notes/Lates: " + NewCreLatesNotes;
+
+
+
+
+                      $("#nota").html(nota1);
+
+
+
+
+                      $(this).dialog("close");
+
+                      ConfirmDialog('Save note?');
+
+                      function ConfirmDialog(message) {
+                          $('<div></div>').appendTo('body')
+                              .html('<div><h6>' + message + '?</h6></div>')
+                              .dialog({
+                                  modal: true,
+                                  title: 'Delete message',
+                                  zIndex: 10000,
+                                  autoOpen: true,
+                                  width: 'auto',
+                                  resizable: false,
+                                  buttons: {
+                                      Yes: function() {
+                                          // $(obj).removeAttr('onclick');                                
+                                          // $(obj).parents('.Parent').remove();
+
+                                          $("#boton1").trigger("click");
+                                          $("#boton6").trigger("click");
+
+                                          $(this).dialog("close");
+                                      },
+                                      No: function() {
+
+
+                                          $(this).dialog("close");
+                                      }
+                                  },
+                                  close: function(event, ui) {
+                                      $(this).remove();
+                                  }
+                              });
+                      };
+
+
+
+
+                  }
+              }
+          });
+
+      });
+
+
+
+      $("#getdataB5").click(function() {
+
+          $("#target option:first").attr('selected', 'selected');
+
+          $("#rendered-formB5").css("display", "block")
+
+          $("#dialog-messageB5").dialog({
+              modal: true,
+              autoopen: false,
+              buttons: {
+                  Cancel: function() {
+                      $(this).dialog("close");
+                  },
+                  Submit: function() {
+                      var value = 1;
+
+                      var rep = "CSR";
+                      var echl = $("#regUpCrelEchl").val();
+
+                      var phone = $("#regUpCrelphone").val();
+                      var select = $("#selectB5 option:selected").val();
+                      var rep = $("#NewCreRep").val();
+                      var regUpCrelPay = $("#regUpCrelPay").val();
+                      var name = $("#regCreName").val();
+                      var loan = $("#regCreLoan").val();
+                      var NewCreDate = $("#regCreDate").val();
+                      var creLimit = $("#regCreLimit").val();
+                      var NewCreBal = $("#regCreBal").val();
+                      var creLpm = $("#regCreLpm").val();
+                      var creNpd = $("#regCreNpd").val();
+                      var NewCreLatesNotes = $("#regCreLatesNotes").val();
+
+                      var regUpCrelPay = $("#regUpCrelPay").val();
+
+                      verifyData();
+                      var nota1;
+
+                      //nota1= select+ " "+phone+" "+ "PER "+rep+ " obtained: "+ "\n"+ "Move in date: " + movein+"\n"+"Payment Amount:" +payment+"\n"+ " LPM:" +lpm +"\n"+"NPD:"+npd+ "\n"+ "Lates over 30 days:"+lates;
+
+
+                      nota1 = select;
+                      nota1 += " " + phone;
+                      nota1 += " / " + "per " + rep + " obtained:";
+                      nota1 += "\n";
+                      nota1 += "Balance: " + NewCreBal;
+                      nota1 += "\n";
+                      nota1 += "Montly Payment: " + regUpCrelPay;
+                      nota1 += "\n";
+                      nota1 += "LPM: " + creLpm;
+                      nota1 += "NPD: " + creNpd;
+                      nota1 += "Notes/Lates: " + NewCreLatesNotes;
+
+
+
+
+                      $("#nota").html(nota1);
+
+                      resetTrades();
+
+
+                      $(this).dialog("close");
+
+                      ConfirmDialog('Save note?');
+
+                      function ConfirmDialog(message) {
+                          $('<div></div>').appendTo('body')
+                              .html('<div><h6>' + message + '?</h6></div>')
+                              .dialog({
+                                  modal: true,
+                                  title: 'Delete message',
+                                  zIndex: 10000,
+                                  autoOpen: true,
+                                  width: 'auto',
+                                  resizable: false,
+                                  buttons: {
+                                      Yes: function() {
+                                          // $(obj).removeAttr('onclick');                                
+                                          // $(obj).parents('.Parent').remove();
+
+                                          $("#boton1").trigger("click");
+                                          $("#boton6").trigger("click");
+
+                                          $(this).dialog("close");
+                                      },
+                                      No: function() {
+
+
+                                          $(this).dialog("close");
+                                      }
+                                  },
+                                  close: function(event, ui) {
+                                      $(this).remove();
+                                  }
+                              });
+                      };
+
+
+
+
+                  }
+              }
+          });
+
+      });
+
+
+      $("#myInput").on("keyup", function() {
+          $("#myList").css("display", "block");
+          var value = $(this).val().toLowerCase();
+          $("#myList li").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+      });
+
+  });
+
+  $('#boton6').click(function() {
+      // Recargo la página
+      location.reload();
+  });
+
+  $(function() {
+      var tabs = $("#tabs").tabs();
+      tabs.find(".ui-tabs-nav").sortable({
+          axis: "x",
+          stop: function() {
+              tabs.tabs("refresh");
+          }
+      });
+  });
+
+  function CopyText() {
+      var copyText = document.getElementById("nota");
+      copyText.select();
+      document.execCommand("copy");
+
+
+
+      $(".alert1").fadeIn("Copied!!! ✅s").delay(3000);
+
+      $(".alert1").hide("Copied!!! ✅s").delay(1000);
+
+
+
+
+  }
+
+  function SaveText() {
+
+     $(".alert1").fadeIn("Saved!!! ✅s").delay(3000);
+
+      $(".alert1").hide("Saved!!! ✅s").delay(1000);
+
+
+}
+
+ 
+
+
+
+  function copy() {
+      setTimeout($(".alert1").text("Copy"));
+
+  }
+
+
+  function copied() {
+
+      setTimeout($(".alert1").text("Copied!!! ✔"));
+  }
+
+  //-----------FUNCTION PARA EDITAR AL ESTUDIANTE---------------//
+
+  function editarEstudiante(id) {
+
+      var estudiante;
+
+      for (var i = 0; i < localStorage.length; i++) {
+
+          var clave = localStorage.key(i);
+          if (clave === id) {
+
+              estudiante = $.parseJSON(localStorage.getItem(clave));
+
+              $("#id").val(estudiante.id);
+              $("#codigo").val(estudiante.codigo);
+              $("#nombre").val(estudiante.nombre);
+              $("#nota").val(estudiante.nota);
+
+
+              var claveRegistro = clave
+
+              alert("Edit Trade Number: " + claveRegistro);
+
+          }
+      }
+  }
+
+
+
+
+
+  //-----------FUNCTION PARA LISTAR AL ESTUDIANTE---------------//
+
+
+  function listarEstudiantes() {
+      var tabla = "";
+      var parrafo1 = $("#p1");
+
+      tabla += '<table border="1" >';
+      tabla += '<tr>';
+      tabla += '<th>Trades</th>';
+      tabla += '<th>ECHL</th>';
+      tabla += '<th>Date</th>';
+      tabla += '<th>Edit</th>';
+      tabla += '<th>delete</th>';
+      tabla += '<th>Subjet</th>';
+      tabla += '<th>Body</th>';
+      tabla += '</tr>';
+
+      for (var i = 0; i < localStorage.length; i++) {
+
+          var clave = localStorage.key(i);
+          var estudiante = $.parseJSON(localStorage.getItem(clave));
+
+
+          var today = new Date();
+
+          var dd = today.getDate();
+
+          var mm = today.getMonth() + 1;
+          var yyyy = today.getFullYear();
+          var hour = today.getHours();
+          var min = today.getMinutes();
+          var seconds = today.getSeconds();
+
+          today = dd + '/' + mm + '/' + yyyy + ' - ' + hour + ':' + min + ':' + seconds;
+
+          tabla += '<tr>';
+          tabla += '<td>' + estudiante.id + '</td>';
+          tabla += '<td>' + estudiante.codigo + '</td>';
+          tabla += '<th>' + today + '</th>';
+          tabla += '<td><button style="padding:10px;" onclick="editarEstudiante(\'' + estudiante.id + '\');">Editar</button></td>';
+
+          tabla += '<td><button style="padding:10px;" onclick="eliminarEstudiante(\'' + estudiante.id + '\');">Eliminar</button></td>';
+          tabla += '<td>' + estudiante.nombre + '</td>';
+          tabla += '<td>' + estudiante.nota + '</td>';
+
+          tabla += '</tr>';
+
+
+      }
+
+
+      $(parrafo1).html(tabla);
+
+
+  }
+  //-----------********FIN FUNCTION PARA LISTAR AL ESTUDIANTE*****---------------//
+
+
+  function predicateBy(prop) {
+      return function(a, b) {
+          if (a[prop] > b[prop]) {
+              return 1;
+          } else if (a[prop] < b[prop]) {
+              return -1;
+          }
+          return 0;
+      }
+  }
+  //-----------FUNCTION PARA ELIMINAR AL ESTUDIANTE---------------//
+
+  function eliminarEstudiante(id) {
+
+      localStorage.removeItem(id);
+      listarEstudiantes();
+  }
+
+  $(document).ready(function() {
+
+      var contador;
+      if (localStorage.length >= 0) {
+
+          contador = localStorage.length + 1;
+      } else {
+
+          contador = 0;
+      }
+
+      $("#id").val(contador);
+      $("#boton1").click(function() {
+          var id = $("#id").val();
+          var codigo = $("#codigo").val();
+          var nombre = $("#nombre").val();
+          var nota = $("#nota").val();
+
+          var estudiante = {
+              id: id,
+              codigo: codigo,
+              nombre: nombre,
+              nota: nota
+          };
+
+          localStorage.setItem(id, JSON.stringify(estudiante));
+          contador = localStorage.length + 1;
+
+
+
+          listarEstudiantes();
+
+       alert("Note " + contador+ " Saved")
+
+      });
+
+      //-----------********FIN FUNCTION PARA ELIMINAR AL ESTUDIANTE*****---------------//
+
+      //-----------BOTONES ---------------//
+
+
+
+
+
+      $("#boton2").click(function() {
+          restablecer();
+
+      });
+
+      $("#boton3").click(function() {
+          mayor();
+
+      });
+
+      $("#boton4").click(function() {
+          menor();
+
+      });
+
+      $("#boton5").click(function() {
+          promNota();
+
+      });
+
+      //-----------***********FIN DE LOS BOTONES**********-------------//
+
+
+      //-----------FUNCTION DE RESTABLECER-------------//
+
+      function restablecer() {
+          $("#id").val(contador);
+          $("#codigo").val("");
+          $("#nombre").val("");
+          $("#nota").val("");
+
+      }
+      listarEstudiantes();
+      $("nombre").val();
+
+      //-----------********FIN FUNCTION PARA RESTABLESCER*****---------------//
+
+      //-----------//-----------********FIN FUNCTION PARA LISTAR AL ESTUDIANTE*****---------------//------------//
+
+      function mayor() {
+
+          var parrafo2 = $("#p2");
+          var estudiante;
+          var mayor = 0;
+          var estudMayor;
+          var print;
+
+
+
+          for (var i = 0; i < localStorage.length; i++) {
+
+              var clave = localStorage.key(i);
+              estudiante = $.parseJSON(localStorage.getItem(clave));
+
+              if (parseFloat(estudiante.nota) > mayor) {
+                  console.log(parseFloat(estudiante.nota));
+                  mayor = parseFloat(estudiante.nota);
+                  estudMayor = estudiante.nombre;
+
+
+              }
+
+              print = "<b>Nota Mayor:<b>" + "<br>" + " El estudiante " + "<b>" + estudMayor + "</b>" + " codigo: " + "<b>" + estudiante.codigo + "</b>" + " es la mejor nota con una calificacion de: " + "<b>" + mayor + "</b>";
+
+          }
+
+          $(parrafo2).html(print);
+      }
+
+      //-----------********FIN  FUNCTION PARA LISTAR AL ESTUDIANTE**********-----------//
+
+      //-----------FUNCTION PARA MOSTRAR AL ESTUDIANTE CON MENOR PROMEDIO-------------//
+
+
+      function menor() {
+
+          var parrafo3 = $("#p3");
+          var estudiante;
+          var menor = 100;
+          var estudMenor;
+          var print;
+
+
+
+          for (var i = 0; i < localStorage.length; i++) {
+
+              var clave = localStorage.key(i);
+              estudiante = $.parseJSON(localStorage.getItem(clave));
+
+              if (parseFloat(estudiante.nota) < menor) {
+                  console.log(parseFloat(estudiante.nota));
+                  menor = parseFloat(estudiante.nota);
+                  estudMenor = estudiante.nombre;
+
+
+              }
+
+              print = "<b>Nota Menor:</b>" + "<br>" + " El estudiante " + "<b>" + estudMenor + "</b>" + " codigo: " + "<b>" + estudiante.codigo + "</b>" + " es la  nota mas baja con una calificacion de: " + "<b>" + menor + "</b>";
+
+          }
+
+          $(parrafo3).html(print);
+      }
+
+      //-----------********FIN  FUNCTION PARA LISTAR AL ESTUDIANTE**********-----------//
+
+      //-----------FUNCTION PARA MOSTRAR  PROMEDIO-------------//
+
+      function promNota() {
+
+          var parrafo4 = $("#p4");
+          var estudiante;
+          var promedio;
+          var numEst = localStorage.length;
+          var printNum = 0;
+
+
+
+          for (var i = 0; i < localStorage.length; i++) {
+
+              var clave = localStorage.key(i);
+              estudiante = $.parseJSON(localStorage.getItem(clave));
+
+              printNum = parseFloat(estudiante.nota);
+              printNum = printNum / numEst;
+
+              promedio = "<b>Promedio:<b>" + "<br>" + " El promedio de notas es " + "<b>" + printNum + "</b>";
+
+          }
+
+          $(parrafo4).html(promedio);
+      }
+
+
+  });</script><script>// Write JavaScript here </script></body>
